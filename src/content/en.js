@@ -176,16 +176,13 @@ export default {
       lead: 'Served from open to close. Ask the counter about the dessert of the day.',
     },
 
-    // Shown as a standing notice at the top of the menu page. This demo menu is
-    // built from what the client's own photos show them serving; it is not the
-    // real card. The one exception is the Lunch Combo, whose price is legible
-    // in lunch_combo.webp.
+    // Transcribed from the client's own printed menu cards.
     notice: {
-      title: '[PLACEHOLDER: Demo menu]',
-      body: 'Dish names below are examples drawn from the client’s own photography, and prices are not set — except the Lunch Combo, which is priced in their promo image. Replace this whole section with the real menu card before use.',
+      title: 'Allergen Notice',
+      body: 'Our products may contain allergens. If you have food allergies or intolerances, please let our staff know before ordering.',
     },
 
-    priceNote: 'Prices to be confirmed',
+    priceNote: 'Included at no extra charge',
     dietary: {
       v: 'Vegetarian',
       vg: 'Vegan',
@@ -194,124 +191,191 @@ export default {
 
     categories: [
       {
-        id: 'waffles',
-        title: 'Waffles & Crêpes',
-        note: 'Made to order — about ten minutes.',
+        id: 'desserts',
+        title: 'Desserts',
+        note: 'Every dessert comes with a sauce, a fruit topping and a sprinkle of your choice.',
         items: [
           {
             name: 'Belgian Waffle',
-            description: 'Strawberries, banana, chocolate sauce, powdered sugar.',
-            tags: ['v'],
+            description: 'Crisp outside, soft in the middle.',
+            price: '10 ₾',
+            tags: [],
           },
           {
-            name: 'Bubble Waffle',
-            description: 'Hong-Kong style, crisp outside and soft through the middle.',
-            tags: ['v'],
+            name: 'Viennese Waffle',
+            description: 'Lighter and airier than the Belgian.',
+            price: '10 ₾',
+            tags: [],
           },
           {
-            name: 'Bubble Waffle with Ice Cream & Fruit',
-            description: 'A scoop in the fold, fresh fruit, sauce of your choice.',
-            tags: ['v'],
+            name: 'French Crêpe',
+            description: 'Thin and folded, sweet.',
+            price: '10 ₾',
+            tags: [],
           },
           {
-            name: 'Crêpe',
-            description: 'Thin, folded, sweet or savoury.',
-            tags: ['v'],
+            name: 'American Pancakes',
+            description: 'A stack, served warm.',
+            price: '10 ₾',
+            tags: [],
           },
           {
-            name: 'Create Your Own Waffle',
-            description: 'Pick the base, then up to three toppings and a sauce.',
-            tags: ['v'],
+            name: 'Bubble Waffle + Ice Cream',
+            description: 'Hong-Kong style bubble waffle with a scoop of ice cream.',
+            price: '12 ₾',
+            tags: [],
           },
         ],
       },
       {
-        id: 'desserts',
-        title: 'Desserts & Ice Cream',
+        id: 'iceCream',
+        title: 'Ice Cream',
+        note: 'One scoop.',
+        items: [
+          { name: 'Vanilla', price: '4 ₾', tags: [] },
+          { name: 'Chocolate', price: '4 ₾', tags: [] },
+          { name: 'Strawberry', price: '4 ₾', tags: [] },
+          { name: 'Pistachio', price: '4 ₾', tags: [] },
+          { name: 'Crème Brûlée', price: '4 ₾', tags: [] },
+        ],
+      },
+      {
+        id: 'toppings',
+        title: 'Toppings',
+        note: 'Every dessert includes one sauce, one fruit topping and one sprinkle. Extras can be added for a small charge.',
+        items: [
+          {
+            name: 'Sauces',
+            description:
+              'Nutella, pistachio cream, caramel, Lotus Biscoff, strawberry sauce, cherry jam, mango jam.',
+            tags: [],
+          },
+          {
+            name: 'Fruits',
+            description: 'Banana, strawberry, kiwi.',
+            tags: [],
+          },
+          {
+            name: 'Sprinkles',
+            description:
+              'Chocolate chips, white chocolate chips, crushed pistachios, almond flakes, whole Oreo, rainbow balls or sticks, M&M’s, jelly beans, mini marshmallows.',
+            tags: [],
+          },
+          {
+            name: 'Extra Sauce',
+            description: 'Add another sauce to your dessert.',
+            price: '2 ₾',
+            tags: [],
+          },
+          {
+            name: 'Extra Sprinkle',
+            description: 'Add another sprinkle to your dessert.',
+            price: '1 ₾',
+            tags: [],
+          },
+          {
+            name: 'Extra Ice Cream Scoop',
+            description: 'Add a scoop to your dessert.',
+            price: '4 ₾',
+            tags: [],
+          },
+        ],
+      },
+      {
+        id: 'sandwiches',
+        title: 'Sandwiches',
+        note: null,
+        items: [
+          { name: 'Ham & Cheese', price: '17 ₾', tags: [] },
+          { name: 'Sulguni & Pesto', price: '16 ₾', tags: [] },
+          { name: 'Salami', price: '18 ₾', tags: [] },
+        ],
+      },
+      {
+        id: 'combo',
+        title: 'Combo',
         note: null,
         items: [
           {
-            name: 'Pistachio-Glazed Bun',
-            description: 'Pistachio cream, crushed pistachio, baked through the morning.',
-            tags: ['v'],
+            name: 'Dessert + Espresso/Americano',
+            description: 'Any dessert except the Bubble Waffle, with an espresso or americano.',
+            price: '14 ₾',
+            tags: [],
           },
           {
-            name: 'Chocolate Profiteroles',
-            description: 'Boxed for takeaway or plated in.',
-            tags: ['v'],
+            name: 'Bubble Waffle + Espresso/Americano',
+            price: '16 ₾',
+            tags: [],
           },
           {
-            name: 'Ice Cream — Single Scoop',
-            description: 'Ask the counter which flavours are on today.',
-            tags: ['v', 'gf'],
+            name: 'Sandwich + Espresso/Americano',
+            description: 'Any sandwich, with an espresso or americano.',
+            price: '22 ₾',
+            tags: [],
           },
           {
-            name: 'Dessert of the Day',
-            description: '[PLACEHOLDER: Whatever the kitchen has made that morning.]',
-            tags: ['v'],
+            name: 'Sandwich + Cola/Fanta/Sprite',
+            description: 'Any sandwich, with a soft drink.',
+            price: '20 ₾',
+            tags: [],
+          },
+          {
+            name: 'Ice Cream + Espresso/Americano',
+            price: '9 ₾',
+            tags: [],
           },
         ],
       },
       {
-        id: 'coffee',
-        title: 'The Coffee Bar',
-        note: 'Oat, almond or lactose-free milk at no extra charge.',
+        id: 'lunch',
+        title: 'Lunch Menu',
+        note: null,
         items: [
           {
-            name: 'Espresso / Double Espresso',
-            description: 'Our house blend.',
-            tags: ['vg', 'gf'],
-          },
-          {
-            name: 'Flat White',
-            description: 'Perfectly micro-foamed milk.',
-            tags: ['v', 'gf'],
-          },
-          {
-            name: 'Cappuccino',
-            description: 'The classic, with a proper cap.',
-            tags: ['v', 'gf'],
-          },
-          {
-            name: 'Iced Latte',
-            description: 'Double shot, cold milk, plenty of ice.',
-            tags: ['v', 'gf'],
-          },
-          {
-            name: 'Strawberry Milkshake',
-            description: 'Blended thick, with a scoop folded through.',
-            tags: ['v', 'gf'],
-          },
-          {
-            name: 'The Glaze Affogato',
-            description: 'A double shot poured over a scoop of vanilla ice cream.',
-            tags: ['v', 'gf'],
-          },
-        ],
-      },
-      {
-        id: 'kitchen',
-        title: 'Breakfast & Lunch',
-        note: 'Breakfast until noon.',
-        items: [
-          {
-            name: 'Breakfast Plate',
-            description: 'Eggs your way, bread, and something from the market.',
-            tags: [],
-          },
-          {
-            name: 'Toasted Sandwich',
-            description: 'Pressed hot, served with a side salad.',
-            tags: [],
-          },
-          {
-            // The one real price on this page — it is printed in the client's
-            // own promo image (images/lunch_combo.webp).
-            name: 'Lunch Combo',
-            description: 'Any sandwich, any dessert and an espresso or americano.',
+            name: 'Lunch Menu',
+            description: 'Any sandwich, any dessert (except the Bubble Waffle) and an espresso or americano.',
             price: '30 ₾',
             tags: [],
           },
+        ],
+      },
+      {
+        id: 'kids',
+        title: 'Kids Menu',
+        note: null,
+        items: [
+          {
+            name: 'Kids Menu',
+            description: 'Mini pancakes with a cocoa and marshmallow.',
+            price: '15 ₾',
+            tags: [],
+          },
+        ],
+      },
+      {
+        id: 'hotDrinks',
+        title: 'Hot Drinks',
+        note: null,
+        items: [
+          { name: 'Espresso', price: '6 ₾', tags: [] },
+          { name: 'Americano', price: '7 ₾', tags: [] },
+          { name: 'Cappuccino', price: '8 ₾', tags: [] },
+          { name: 'Latte', price: '9 ₾', tags: [] },
+          { name: 'Tea', price: '5 ₾', tags: [] },
+          { name: 'Cocoa', price: '8 ₾', tags: [] },
+        ],
+      },
+      {
+        id: 'coldDrinks',
+        title: 'Cold Drinks',
+        note: null,
+        items: [
+          { name: 'Iced Coffee', price: '8 ₾', tags: [] },
+          { name: 'Iced Coffee + Ice Cream', price: '10 ₾', tags: [] },
+          { name: 'Milkshake', price: '12 ₾', tags: [] },
+          { name: 'Fuse Tea', price: '4 ₾', tags: [] },
+          { name: 'Coca-Cola / Fanta / Sprite', price: '4 ₾', tags: [] },
+          { name: 'Mountain Water', price: '2 ₾', tags: [] },
         ],
       },
     ],
