@@ -29,6 +29,11 @@
   --container-narrow: 780px;
   --nav-h: 62px;
 
+  /* A deliberately larger radius than Classical's interface scale (2/4/7px) —
+     for the photographic category cards on the menu page, where a visibly
+     rounded frame is the point rather than a light interface touch. */
+  --radius-xl: 22px;
+
   /* — display type —
      Classical caps interface headings at semibold and sets display text in the
      normal cut ("the bigger the text the lighter it sets"). These sizes are

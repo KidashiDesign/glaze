@@ -1,3 +1,4 @@
+import Picture from './Picture'
 import { useRevealOnView } from '../animation/useRevealOnView'
 import { useLocale } from '../i18n/LocaleProvider'
 
@@ -8,6 +9,10 @@ import { useLocale } from '../i18n/LocaleProvider'
  *
  * A few rows (the topping lists) are informational and carry no price; those
  * fall back to the placeholder dash, with `priceNote` as hidden a11y text.
+ *
+ * Each category opens with a photo in a rounded frame, its title set as a
+ * centred pill badge over the image — the title text is what the badge
+ * shows, so the photo itself stays decorative (empty alt).
  */
 function MenuCategory({ category, dietary, priceNote, priceTbc }) {
   const { locale } = useLocale()
@@ -15,12 +20,23 @@ function MenuCategory({ category, dietary, priceNote, priceTbc }) {
 
   return (
     <section ref={ref} className="menu-cat" aria-labelledby={`cat-${category.id}`}>
-      <header className="menu-cat__head reveal" data-reveal>
-        <h2 id={`cat-${category.id}`} className="h2 menu-cat__title">
+      <div className="menu-cat__media reveal" data-reveal>
+        <Picture
+          name={category.image}
+          alt=""
+          sizes="(min-width: 900px) 780px, 100vw"
+          className="menu-cat__picture"
+        />
+        <h2 id={`cat-${category.id}`} className="h3 menu-cat__badge">
           {category.title}
         </h2>
-        {category.note && <p className="menu-cat__note text-muted">{category.note}</p>}
-      </header>
+      </div>
+
+      {category.note && (
+        <p className="menu-cat__note text-muted reveal" data-reveal>
+          {category.note}
+        </p>
+      )}
 
       <ul className="menu-cat__list">
         {category.items.map((item) => (

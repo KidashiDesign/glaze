@@ -192,6 +192,7 @@ export default {
     categories: [
       {
         id: 'desserts',
+        image: 'Belgian_Waffle',
         title: 'Desserts',
         note: 'Every dessert comes with a sauce, a fruit topping and a sprinkle of your choice.',
         items: [
@@ -229,6 +230,7 @@ export default {
       },
       {
         id: 'iceCream',
+        image: 'bubble_waffle_with_ice_cream__fruit',
         title: 'Ice Cream',
         note: 'One scoop.',
         items: [
@@ -241,6 +243,7 @@ export default {
       },
       {
         id: 'toppings',
+        image: 'Cinnamon_Roll',
         title: 'Toppings',
         note: 'Every dessert includes one sauce, one fruit topping and one sprinkle. Extras can be added for a small charge.',
         items: [
@@ -283,6 +286,7 @@ export default {
       },
       {
         id: 'sandwiches',
+        image: 'Sandwich',
         title: 'Sandwiches',
         note: null,
         items: [
@@ -293,6 +297,7 @@ export default {
       },
       {
         id: 'combo',
+        image: 'Take_Away',
         title: 'Combo',
         note: null,
         items: [
@@ -328,6 +333,7 @@ export default {
       },
       {
         id: 'lunch',
+        image: 'Breakfast',
         title: 'Lunch Menu',
         note: null,
         items: [
@@ -341,6 +347,7 @@ export default {
       },
       {
         id: 'kids',
+        image: 'crepe',
         title: 'Kids Menu',
         note: null,
         items: [
@@ -354,6 +361,7 @@ export default {
       },
       {
         id: 'hotDrinks',
+        image: 'Coffee',
         title: 'Hot Drinks',
         note: null,
         items: [
@@ -367,6 +375,7 @@ export default {
       },
       {
         id: 'coldDrinks',
+        image: 'cravings',
         title: 'Cold Drinks',
         note: null,
         items: [
