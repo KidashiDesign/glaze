@@ -755,6 +755,14 @@
   }
 }
 
+/* Fewer reviews than the wall needs (see WALL_MIN_REVIEWS in Reviews.jsx):
+   a single centered column instead of a half-empty two-column grid. Two
+   classes beat the media query above regardless of source order. */
+.reviews__wall.reviews__wall--static {
+  grid-template-columns: minmax(0, 30rem);
+  justify-content: center;
+}
+
 /* ── gallery ─────────────────────────────────────────────────────────────── */
 
 .gallery__head {

@@ -29,58 +29,12 @@ export const reviews = [
     verified: true,
   },
 
-  // ── Everything below is sample data ─────────────────────────────────────
-  // [PLACEHOLDER] Only the Mariam K. review above is real. These are written
-  // to demonstrate the layout at realistic length and MUST be replaced with
-  // (or removed in favour of) actual reviews before this goes in front of
-  // anyone outside the presentation. Their `author` reads "Anonymous Guest"
-  // rather than a bracketed placeholder — if a real future review has no name
-  // to attribute (e.g. permission wasn't given), reuse that value instead of
-  // leaving a visible [PLACEHOLDER] tag in front of a customer.
-  {
-    id: 'placeholder-2',
-    author: 'Anonymous Guest',
-    rating: 5,
-    lang: 'en',
-    quote:
-      '[PLACEHOLDER: A short review about the waffles — roughly this length, one or two sentences, mentioning a specific item.]',
-    verified: false,
-  },
-  {
-    id: 'placeholder-3',
-    author: 'Anonymous Guest',
-    rating: 5,
-    lang: 'ka',
-    quote:
-      '[PLACEHOLDER: A Georgian-language review. Quotes stay in the language they were written in.]',
-    verified: false,
-  },
-  {
-    id: 'placeholder-4',
-    author: 'Anonymous Guest',
-    rating: 4,
-    lang: 'en',
-    quote:
-      '[PLACEHOLDER: A slightly longer review about the room and the coffee — three sentences, to show how the card handles the tallest realistic case.]',
-    verified: false,
-  },
-  {
-    id: 'placeholder-5',
-    author: 'Anonymous Guest',
-    rating: 5,
-    lang: 'en',
-    quote: '[PLACEHOLDER: A very short review — the shortest realistic case.]',
-    verified: false,
-  },
-  {
-    id: 'placeholder-6',
-    author: 'Anonymous Guest',
-    rating: 5,
-    lang: 'en',
-    quote:
-      '[PLACEHOLDER: A review mentioning the bubble waffles and the service, two sentences.]',
-    verified: false,
-  },
+  // No other reviews are sourced yet. Rather than pad the wall with invented
+  // sample quotes, this list stays at one real entry — Reviews.jsx falls back
+  // to a static single-card layout below a review count threshold instead of
+  // the multi-column scroll wall, so a short list still looks intentional.
+  // Add more real entries here as they come in (a Google Places "Place
+  // Details" response maps onto this shape one-to-one).
 ]
 
 /** Average of the cached ratings, rounded to one decimal. */

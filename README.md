@@ -104,9 +104,11 @@ rendered page. Search `src/content/en.js` and `ka.js`.
 and every price is a placeholder **except the Lunch Combo (30 ₾)**. Replace the
 whole card with the real one.
 
-**Reviews** — only the Mariam K. review is real. The other five are marked
-placeholders and render with a dashed border. Replace or remove them before this
-is shown outside the presentation.
+**Reviews** — only the Mariam K. review is sourced so far; the section shows
+just that one rather than padding the wall with invented quotes. Add real
+entries to `src/content/reviews.js` as they come in — below four reviews the
+wall renders as a static centered stack instead of the two-column scroll, so
+a short list still looks intentional.
 
 **Georgian and Russian copy** — ⚠ both need a native-speaker pass. The
 translations are careful, but marketing tone needs a native ear, and the menu

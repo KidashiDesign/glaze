@@ -55,12 +55,18 @@ function ReviewCard({ review, starsLabel }) {
  * an explicit pause control is always available — continuous motion longer
  * than five seconds needs a way to stop it (WCAG 2.2.2).
  */
+// Below this many reviews, a two-column scroll wall leaves one column empty
+// or loops a single card past itself — neither reads as intentional. A short
+// list renders as a static, centered stack instead.
+const WALL_MIN_REVIEWS = 4
+
 export default function Reviews() {
   const { t, locale } = useLocale()
   const reduced = usePrefersReducedMotion()
   const [paused, setPaused] = useState(false)
   const root = useRef(null)
   const tweens = useRef([])
+  const showWall = reviews.length >= WALL_MIN_REVIEWS
 
   // Split into two columns; the second is offset so the pair never lines up.
   const columns = [
@@ -69,7 +75,7 @@ export default function Reviews() {
   ]
 
   useLayoutEffect(() => {
-    if (reduced) return
+    if (reduced || !showWall) return
 
     const ctx = gsap.context(() => {
       const tracks = root.current.querySelectorAll('[data-review-track]')
@@ -118,7 +124,7 @@ export default function Reviews() {
     tweens.current.forEach((tween) => (paused ? tween.pause() : tween.resume()))
   }, [paused])
 
-  const animated = !reduced
+  const animated = !reduced && showWall
 
   return (
     <section id="reviews" className="section section-surface reviews">
@@ -140,35 +146,43 @@ export default function Reviews() {
           <span className="text-muted">{t.reviews.ratingLabel}</span>
         </p>
 
-        <div
-          ref={root}
-          className={`reviews__wall ${animated ? 'is-animated' : ''}`}
-          onMouseEnter={() => animated && setPaused(true)}
-          onMouseLeave={() => animated && setPaused(false)}
-          onFocusCapture={() => animated && setPaused(true)}
-          onBlurCapture={() => animated && setPaused(false)}
-        >
-          {columns.map((column, i) => (
-            <div key={i} className="reviews__col">
-              <div data-review-track className="reviews__track">
-                {/* Rendered twice so the loop can wrap seamlessly. The copy is
-                    hidden from assistive tech to avoid reading it all again. */}
-                {column.map((review) => (
-                  <ReviewCard key={review.id} review={review} starsLabel={t.reviews.starsLabel} />
-                ))}
-                <div aria-hidden="true" className="reviews__track-copy">
+        {showWall ? (
+          <div
+            ref={root}
+            className={`reviews__wall ${animated ? 'is-animated' : ''}`}
+            onMouseEnter={() => animated && setPaused(true)}
+            onMouseLeave={() => animated && setPaused(false)}
+            onFocusCapture={() => animated && setPaused(true)}
+            onBlurCapture={() => animated && setPaused(false)}
+          >
+            {columns.map((column, i) => (
+              <div key={i} className="reviews__col">
+                <div data-review-track className="reviews__track">
+                  {/* Rendered twice so the loop can wrap seamlessly. The copy is
+                      hidden from assistive tech to avoid reading it all again. */}
                   {column.map((review) => (
-                    <ReviewCard
-                      key={`${review.id}-copy`}
-                      review={review}
-                      starsLabel={t.reviews.starsLabel}
-                    />
+                    <ReviewCard key={review.id} review={review} starsLabel={t.reviews.starsLabel} />
                   ))}
+                  <div aria-hidden="true" className="reviews__track-copy">
+                    {column.map((review) => (
+                      <ReviewCard
+                        key={`${review.id}-copy`}
+                        review={review}
+                        starsLabel={t.reviews.starsLabel}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        ) : (
+          <div className="reviews__wall reviews__wall--static">
+            {reviews.map((review) => (
+              <ReviewCard key={review.id} review={review} starsLabel={t.reviews.starsLabel} />
+            ))}
+          </div>
+        )}
 
         <div className="reviews__actions">
           {animated && (
