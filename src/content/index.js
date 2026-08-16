@@ -1,8 +1,9 @@
 import en from './en'
 import ka from './ka'
+import ru from './ru'
 
-export const locales = { en, ka }
-export const localeCodes = /** @type {const} */ (['en', 'ka'])
+export const locales = { en, ka, ru }
+export const localeCodes = /** @type {const} */ (['en', 'ka', 'ru'])
 export const defaultLocale = 'en'
 
 /**
@@ -36,8 +37,11 @@ function diffShape(a, b, path = '') {
 }
 
 if (import.meta.env.DEV) {
-  const missingInKa = diffShape(en, ka)
-  const missingInEn = diffShape(ka, en)
-  if (missingInKa.length) console.warn('[i18n] missing in ka.js:', missingInKa)
-  if (missingInEn.length) console.warn('[i18n] missing in en.js:', missingInEn)
+  for (const code of localeCodes) {
+    if (code === 'en') continue
+    const missingInOther = diffShape(en, locales[code])
+    const missingInEn = diffShape(locales[code], en)
+    if (missingInOther.length) console.warn(`[i18n] missing in ${code}.js:`, missingInOther)
+    if (missingInEn.length) console.warn(`[i18n] missing in en.js (present in ${code}.js):`, missingInEn)
+  }
 }

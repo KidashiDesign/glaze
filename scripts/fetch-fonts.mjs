@@ -12,6 +12,9 @@
  *
  * Output is committed, so a fresh clone runs without network access.
  */
+// Subsets: latin/latin-ext for English, cyrillic/cyrillic-ext for Russian
+// (both Cormorant Garamond and Lora cover Cyrillic natively), georgian for
+// Georgian via the separate Noto Serif Georgian face below.
 import { mkdir, writeFile, rm } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -26,8 +29,16 @@ const UA =
   '(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
 
 const FAMILIES = [
-  { name: 'Cormorant Garamond', query: 'Cormorant+Garamond:ital,wght@0,400;0,600;1,400', subsets: ['latin', 'latin-ext'] },
-  { name: 'Lora', query: 'Lora:ital,wght@0,400;0,600;1,400', subsets: ['latin', 'latin-ext'] },
+  {
+    name: 'Cormorant Garamond',
+    query: 'Cormorant+Garamond:ital,wght@0,400;0,600;1,400',
+    subsets: ['latin', 'latin-ext', 'cyrillic', 'cyrillic-ext'],
+  },
+  {
+    name: 'Lora',
+    query: 'Lora:ital,wght@0,400;0,600;1,400',
+    subsets: ['latin', 'latin-ext', 'cyrillic', 'cyrillic-ext'],
+  },
   { name: 'Noto Serif Georgian', query: 'Noto+Serif+Georgian:wght@400;600', subsets: ['georgian'] },
 ]
 

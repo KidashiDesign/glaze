@@ -1,7 +1,8 @@
 # Glaze — Demo Website
 
-A bilingual (English / Georgian), responsive demo site for **Glaze — Desserts &
-Coffee** in Tbilisi. React + Vite, GSAP/ScrollTrigger, no framework beyond that.
+A trilingual (English / Georgian / Russian), responsive demo site for **Glaze —
+Desserts & Coffee** in Tbilisi. React + Vite, GSAP/ScrollTrigger, no framework
+beyond that.
 
 Built for a client presentation. The full brief — including which requirements
 were changed and why — is in [`docs/BRIEF.md`](docs/BRIEF.md).
@@ -30,7 +31,7 @@ scripts/
   fetch-fonts.mjs           Font pipeline
 src/
   content/                  ALL copy and image mapping — edit only this
-    en.js  ka.js            Bilingual copy, identical shapes
+    en.js  ka.js  ru.js     Copy per locale, identical shapes
     media.js                Which photo goes where
     reviews.js              Cached Google reviews
   styles/
@@ -107,9 +108,10 @@ whole card with the real one.
 placeholders and render with a dashed border. Replace or remove them before this
 is shown outside the presentation.
 
-**Georgian copy** — ⚠ needs a native-speaker pass. The translation is careful,
-but marketing tone needs a native ear, and the menu names should be checked
-against what the counter actually calls them.
+**Georgian and Russian copy** — ⚠ both need a native-speaker pass. The
+translations are careful, but marketing tone needs a native ear, and the menu
+names should be checked against what the counter actually calls them in each
+language.
 
 ## Accessibility
 
