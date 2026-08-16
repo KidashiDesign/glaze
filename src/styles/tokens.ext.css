@@ -1,0 +1,66 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   LANDING-PAGE EXTENSIONS to the Classical design system.
+
+   Classical is sized for interface work: its spacing scale tops out at 36.8px
+   and h1 is a fixed 42px. A marketing page needs section rhythm several times
+   that, and a hero headline that scales with the viewport. Everything here is
+   *additive* — no token defined in classical.css is redefined, so taking a
+   system update never collides with this file.
+
+   The base unit stays Classical's: 4.6px (density 1.15x). Every step below is
+   a whole multiple of it, so the two scales interleave cleanly.
+   ═══════════════════════════════════════════════════════════════════════════ */
+:root {
+  /* — spacing, continuing 4.6px * n past the system's --space-8 — */
+  --space-12: 55.2px;
+  --space-16: 73.6px;
+  --space-20: 92px;
+  --space-24: 110.4px;
+  --space-32: 147.2px;
+
+  /* Vertical rhythm between page sections, fluid between mobile and desktop. */
+  --section-y: clamp(var(--space-16), 11vw, var(--space-32));
+  --section-y-tight: clamp(var(--space-12), 7vw, var(--space-20));
+
+  /* — layout — */
+  --gutter: clamp(20px, 5.5vw, var(--space-12));
+  --measure: 62ch; /* the ~60ch measure the handoff sheet calls for */
+  --container: 1180px;
+  --container-narrow: 780px;
+  --nav-h: 62px;
+
+  /* — display type —
+     Classical caps interface headings at semibold and sets display text in the
+     normal cut ("the bigger the text the lighter it sets"). These sizes are
+     display-only; h1–h6 keep the system's fixed sizes for body content. */
+  --text-display: clamp(2.85rem, 10.5vw, 6.5rem);
+  --text-h1: clamp(2.3rem, 6.6vw, 4.1rem);
+  --text-h2: clamp(1.85rem, 4.4vw, 2.9rem);
+  --text-h3: clamp(1.35rem, 2.6vw, 1.75rem);
+  --text-lead: clamp(1.02rem, 1.9vw, 1.24rem);
+  --text-kicker: 0.72rem;
+  --display-weight: 400;
+
+  /* — motion —
+     Durations and easings are shared by GSAP and CSS so hover states and
+     scroll reveals feel like one system. Consumed from JS via
+     src/animation/motion.js. */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-inout: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 220ms;
+  --dur-base: 420ms;
+  --dur-slow: 780ms;
+
+  /* — the dark ground used by the hero and the footer —
+     A shade below --color-neutral-900, matching the "colophon page" treatment
+     the system's readme describes for section dividers. */
+  --color-ink: #1a1918;
+  --color-on-ink: #efece7;
+  --color-on-ink-muted: color-mix(in srgb, #efece7 62%, transparent);
+}
+
+@media (min-width: 900px) {
+  :root {
+    --nav-h: 84px;
+  }
+}
