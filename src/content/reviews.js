@@ -33,10 +33,13 @@ export const reviews = [
   // [PLACEHOLDER] Only the Mariam K. review above is real. These are written
   // to demonstrate the layout at realistic length and MUST be replaced with
   // (or removed in favour of) actual reviews before this goes in front of
-  // anyone outside the presentation.
+  // anyone outside the presentation. Their `author` reads "Anonymous Guest"
+  // rather than a bracketed placeholder — if a real future review has no name
+  // to attribute (e.g. permission wasn't given), reuse that value instead of
+  // leaving a visible [PLACEHOLDER] tag in front of a customer.
   {
     id: 'placeholder-2',
-    author: '[PLACEHOLDER: Reviewer name]',
+    author: 'Anonymous Guest',
     rating: 5,
     lang: 'en',
     quote:
@@ -45,7 +48,7 @@ export const reviews = [
   },
   {
     id: 'placeholder-3',
-    author: '[PLACEHOLDER: Reviewer name]',
+    author: 'Anonymous Guest',
     rating: 5,
     lang: 'ka',
     quote:
@@ -54,7 +57,7 @@ export const reviews = [
   },
   {
     id: 'placeholder-4',
-    author: '[PLACEHOLDER: Reviewer name]',
+    author: 'Anonymous Guest',
     rating: 4,
     lang: 'en',
     quote:
@@ -63,7 +66,7 @@ export const reviews = [
   },
   {
     id: 'placeholder-5',
-    author: '[PLACEHOLDER: Reviewer name]',
+    author: 'Anonymous Guest',
     rating: 5,
     lang: 'en',
     quote: '[PLACEHOLDER: A very short review — the shortest realistic case.]',
@@ -71,7 +74,7 @@ export const reviews = [
   },
   {
     id: 'placeholder-6',
-    author: '[PLACEHOLDER: Reviewer name]',
+    author: 'Anonymous Guest',
     rating: 5,
     lang: 'en',
     quote:
