@@ -104,11 +104,15 @@ rendered page. Search `src/content/en.js` and `ka.js`.
 and every price is a placeholder **except the Lunch Combo (30 ₾)**. Replace the
 whole card with the real one.
 
-**Reviews** — only the Mariam K. review is sourced so far; the section shows
-just that one rather than padding the wall with invented quotes. Add real
-entries to `src/content/reviews.js` as they come in — below four reviews the
-wall renders as a static centered stack instead of the two-column scroll, so
-a short list still looks intentional.
+**Reviews** — 25 real reviews, copied from the business's own public Google
+Business Profile (see `src/content/reviews.js` for the sourcing note).
+Star ratings are all 5 because Google's page doesn't expose a per-review
+overall rating in a way that survives a copy-paste — only the food/service/
+ambience sub-scores do, and those were 5s throughout. **Confirm reproducing
+these names and quotes is fine with the client before this goes live**, same
+as any other real customer data. Below four reviews the wall falls back to a
+static centered stack instead of the two-column scroll, so a short list
+still looks intentional if entries are ever pruned.
 
 **Georgian and Russian copy** — ⚠ both need a native-speaker pass. The
 translations are careful, but marketing tone needs a native ear, and the menu
