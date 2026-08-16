@@ -1,78 +1,146 @@
 # Glaze — Demo Website
 
-A responsive React (Vite) demo site for Glaze, a gelato & specialty coffee cafe
-in Tbilisi, Georgia. Layout, section order and scroll/hover/reveal animations
-are modeled on the Webflow template ["Zesty"](https://zesty-template.webflow.io/),
-rebuilt natively with React + GSAP/ScrollTrigger (no Webflow IX2 code was
-copied — only DOM/CSS structure and animation timing were used as reference).
+A bilingual (English / Georgian), responsive demo site for **Glaze — Desserts &
+Coffee** in Tbilisi. React + Vite, GSAP/ScrollTrigger, no framework beyond that.
 
-This is a **client-presentation demo**. Content is separated from structure so
-copy can be swapped without touching any component or animation code.
-
-## Getting started
+Built for a client presentation. The full brief — including which requirements
+were changed and why — is in [`docs/BRIEF.md`](docs/BRIEF.md).
 
 ```bash
 npm install
 npm run dev      # http://localhost:5173
 npm run build    # production build to dist/
+npm run preview  # serve the build
+
+npm run images   # regenerate crops in public/img from images/
+npm run fonts    # re-download the self-hosted woff2 files
 ```
 
-## Project structure
+## Layout
 
 ```
+images/                     Client's original photos — untouched masters
+public/img/                 Generated crops (committed, so a clone just runs)
+  wide/  16:9   gallery, section blocks, desktop heroes
+  tall/  4:5    mobile heroes
+  promo/        uncropped promo graphics with baked-in text
+public/fonts/               Self-hosted woff2
+scripts/
+  prepare-images.mjs        Content-aware cropping pipeline
+  fetch-fonts.mjs           Font pipeline
 src/
-  content/siteContent.js   # ALL copy & content — edit this to update text
-  components/               # Section components (Hero, About, Menu, ...)
-  animation/                 # GSAP building blocks (ShapeRevealParallax, ParallaxDrift)
-  hooks/usePrefersReducedMotion.js
-  styles/                     # tokens.css (design tokens) + sections.css + global.css
-images/                       # Local cafe/gelato photo assets
+  content/                  ALL copy and image mapping — edit only this
+    en.js  ka.js            Bilingual copy, identical shapes
+    media.js                Which photo goes where
+    reviews.js              Cached Google reviews
+  styles/
+    classical.css           Client's design system, vendored verbatim
+    tokens.ext.css          Additive landing-page tokens
+    base.css sections.css   Layout and sections
+  animation/                GSAP primitives, all reduced-motion aware
+  components/  routes/  i18n/  hooks/
 ```
 
-To change copy, prices, images, or links: edit `src/content/siteContent.js`
-only. No GSAP or CSS files need to be touched.
+To change wording, prices, links or which photo appears where: edit
+`src/content/`. Nothing in `components/`, `routes/`, `animation/` or `styles/`
+needs to be opened.
 
-## Design tokens
+## Design system
 
-Colors and type come from the client-provided CI (`Color_and_type_pairings`
-export): warm near-white background, deep espresso-brown text, gold accent;
-Cormorant Garamond for headings, Lora for body copy. Tokens live in
-`src/styles/tokens.css`.
+`src/styles/classical.css` is the client's *Zesty Color & Type Handoff*
+stylesheet, vendored **verbatim** with one change: the render-blocking Google
+Fonts `@import` is removed because the faces are self-hosted. To take a system
+update, drop in the new file and re-apply that one edit.
 
-## Accessibility
+Landing-page needs it does not cover — section rhythm, a fluid display scale,
+layout containers — live in `tokens.ext.css` and are strictly additive.
 
-Every scroll/hover/load animation checks `prefers-reduced-motion` via the
-`usePrefersReducedMotion` hook and falls back to a simple fade-in (no
-clip-path/scale/parallax) when the user has that preference set.
+> **The package contradicts itself on colour.** Its handoff sheet specifies a
+> warm-nude ground with a forest-green accent (`#e8dfcf` / `#185b37` /
+> `#d1a658`); the `styles.css` it names as the source of truth specifies a
+> neutral grey ground with a gold accent (`#f3f2f2` / `#b68235`). None of the
+> handoff's hexes appear in that file. **`styles.css` was chosen.** The brand's
+> own takeaway cup is dark green and gold, so the handoff palette may be closer
+> to the real brand — switching is a five-value edit in `classical.css`.
 
-## Mobile
+## What the photos told us
 
-The site is built mobile-first — most traffic is expected on smartphones.
-Animations are not disabled on mobile; they use the same mechanics as desktop
-with shorter scroll distances and a capped scale/drift amount (see
-`ShapeRevealParallax` and `ParallaxDrift` in `src/animation/`).
+Several facts were read off the client's own promo images rather than supplied.
+**All of these should be confirmed before anything goes public.**
+
+| Fact | Source file |
+| --- | --- |
+| Address: 9 Alexandr Pushkin St, Tbilisi | `Glaze_is_now_open.webp` |
+| Instagram: `@glaze.tbilisi` | `Happy_Hours.webp` |
+| Happy Hours: 09:30–14:00 daily, 15% off | `Happy_Hours.webp` |
+| Lunch Combo: 30 ₾ (any sandwich + dessert + espresso/americano) | `lunch_combo.webp` |
+| Brand mark: "GLAZE — DESSERTS & COFFEE", gold on dark green | `main_chraracter.webp` |
+
+Those three promo files carry typeset copy in the pixels, so the pipeline emits
+them uncropped and no page uses them as a croppable photograph.
+
+Note also that several file names do not match their contents: `Breakfast` is a
+toasted sandwich, `Cinnamon_Roll` is a pistachio-glazed bun, `Desert` is a fruit
+waffle, `Mood` is a hamster on a diving board at sea. Assignments in
+`media.js` follow the pictures, not the names.
 
 ## Remaining placeholders
 
-Search `src/content/siteContent.js` for `[PLACEHOLDER: ...]` to find every
-item below in context.
+Everything below appears as `[PLACEHOLDER: ...]` in the source and in the
+rendered page. Search `src/content/en.js` and `ka.js`.
 
-- **Hero eyebrow** — location tag copy
-- **Gelato & coffee menu prices** (6 items across both menu categories)
-- **Private events section** — no placeholders in copy, but image is a stand-in stock shot; confirm with client
-- **Social feed CTA link** — Instagram profile URL
-- **Footer** — street address, opening hours, phone number, email address
-- **Footer / social feed** — Instagram URL (used in two places)
+**Content**
 
-Everything else (headlines, section copy, USP text, the Google review quote
-and link) is final, client-ready copy as provided in the brief.
+- Founding story — both paragraphs on `/about`
+- Full opening hours (only the Happy Hours window is known)
+- Phone number
+- Email address
+- Enquiry destination for the private-events CTA (email, form or WhatsApp)
+- Alt text for every photograph, and the gallery captions
+- Hero eyebrow / image descriptions
 
-## Notes
+**Menu** — every dish name is an example drawn from the client's photography,
+and every price is a placeholder **except the Lunch Combo (30 ₾)**. Replace the
+whole card with the real one.
 
-- No AI-authorship labeling appears anywhere on the site itself (per brief).
-- The Google Maps review in the Testimonial section links to Glaze's real
-  Google Business Profile — verify this is approved for use before the demo
-  goes live to the client or public.
-- Google Fonts are loaded via a CDN `<link>` in `index.html`; if the
-  deployment environment blocks that domain, self-host the two font files
-  instead.
+**Reviews** — only the Mariam K. review is real. The other five are marked
+placeholders and render with a dashed border. Replace or remove them before this
+is shown outside the presentation.
+
+**Georgian copy** — ⚠ needs a native-speaker pass. The translation is careful,
+but marketing tone needs a native ear, and the menu names should be checked
+against what the counter actually calls them.
+
+## Accessibility
+
+- `prefers-reduced-motion` is honoured by every animation, and honoured *live*:
+  scroll effects run through `gsap.matchMedia`, so flipping the OS setting
+  installs the fallback without a reload. Clip-path, scale, parallax and Ken
+  Burns are dropped; elements fade in place.
+- The review wall auto-scrolls, so it has a visible pause control and pauses on
+  hover and on focus (WCAG 2.2.2).
+- Skip link, focus-visible rings from the design system, `aria-expanded` on the
+  menu toggle, Escape to close the overlay, `aria-pressed` on the language
+  switch.
+- `<html lang>` follows the language switch, so fonts, hyphenation and
+  screen-reader pronunciation all track it.
+
+## Known limitations
+
+- **Image resolution.** The originals are ~900–1226px wide portraits; a 16:9 crop
+  leaves at most that width. Full-bleed desktop heroes are soft on large
+  displays. Only higher-resolution originals fix this.
+- **Client-side meta tags.** Titles and descriptions are set after mount. Fine
+  for browser tabs and JS-executing crawlers, but social link previews would
+  need server-rendered tags.
+- **No analytics, no cookie banner, no form backend.** None was in scope.
+- **Two people are recognisable** in `inside_the_cafe.webp` and `Waffle_Man.webp`.
+  Confirm permission before publishing.
+- **The Google review quote and reviewer name** are reproduced from the public
+  Google Business Profile. Confirm this use is approved before going live.
+
+## Verification
+
+Production build is clean; all generated images and fonts land in `dist/`. Pages
+were driven with Playwright at 1440×900 and 390×844, in both languages and with
+`prefers-reduced-motion: reduce`, with no console errors and no failed requests.

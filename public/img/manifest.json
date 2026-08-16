@@ -1,0 +1,289 @@
+{
+  "Belgian_Waffle": {
+    "wide": {
+      "sizes": [
+        480,
+        720,
+        1080
+      ],
+      "ratio": 1.7778,
+      "base": "/img/wide/Belgian_Waffle"
+    }
+  },
+  "Breakfast": {
+    "wide": {
+      "sizes": [
+        480,
+        720,
+        901
+      ],
+      "ratio": 1.7778,
+      "base": "/img/wide/Breakfast"
+    }
+  },
+  "Bubble_Waffle": {
+    "wide": {
+      "sizes": [
+        480,
+        720,
+        1080
+      ],
+      "ratio": 1.7778,
+      "base": "/img/wide/Bubble_Waffle"
+    }
+  },
+  "Bubble_Waffle_and_strawberries": {
+    "wide": {
+      "sizes": [
+        480,
+        720,
+        1080
+      ],
+      "ratio": 1.7778,
+      "base": "/img/wide/Bubble_Waffle_and_strawberries"
+    },
+    "tall": {
+      "sizes": [
+        480,
+        720,
+        1080
+      ],
+      "ratio": 0.8,
+      "base": "/img/tall/Bubble_Waffle_and_strawberries"
+    }
+  },
+  "Cinnamon_Roll": {
+    "wide": {
+      "sizes": [
+        480,
+        720,
+        900
+      ],
+      "ratio": 1.7778,
+      "base": "/img/wide/Cinnamon_Roll"
+    }
+  },
+  "Coffee": {
+    "wide": {
+      "sizes": [
+        480,
+        720,
+        1080
+      ],
+      "ratio": 1.7778,
+      "base": "/img/wide/Coffee"
+    }
+  },
+  "Create_your_own_waffle": {
+    "tall": {
+      "sizes": [
+        480,
+        720,
+        901
+      ],
+      "ratio": 0.8,
+      "base": "/img/tall/Create_your_own_waffle"
+    }
+  },
+  "Desert": {
+    "wide": {
+      "sizes": [
+        480,
+        720,
+        900
+      ],
+      "ratio": 1.7778,
+      "base": "/img/wide/Desert"
+    }
+  },
+  "Glaze_is_now_open": {
+    "promo": {
+      "sizes": [
+        480,
+        720
+      ],
+      "ratio": 0.8,
+      "base": "/img/promo/Glaze_is_now_open"
+    }
+  },
+  "Happy_Hours": {
+    "promo": {
+      "sizes": [
+        480,
+        720,
+        900
+      ],
+      "ratio": 0.5625,
+      "base": "/img/promo/Happy_Hours"
+    }
+  },
+  "Mood": {
+    "tall": {
+      "sizes": [
+        480,
+        720,
+        1226
+      ],
+      "ratio": 0.8,
+      "base": "/img/tall/Mood"
+    }
+  },
+  "Sandwich": {
+    "wide": {
+      "sizes": [
+        480,
+        720,
+        901
+      ],
+      "ratio": 1.7778,
+      "base": "/img/wide/Sandwich"
+    }
+  },
+  "Some_sweet": {
+    "wide": {
+      "sizes": [
+        480,
+        720,
+        899
+      ],
+      "ratio": 1.7778,
+      "base": "/img/wide/Some_sweet"
+    }
+  },
+  "Take_Away": {
+    "wide": {
+      "sizes": [
+        480,
+        720,
+        899
+      ],
+      "ratio": 1.7778,
+      "base": "/img/wide/Take_Away"
+    }
+  },
+  "Taste_Glaze": {
+    "wide": {
+      "sizes": [
+        480,
+        720,
+        901
+      ],
+      "ratio": 1.7778,
+      "base": "/img/wide/Taste_Glaze"
+    },
+    "tall": {
+      "sizes": [
+        480,
+        720,
+        901
+      ],
+      "ratio": 0.8,
+      "base": "/img/tall/Taste_Glaze"
+    }
+  },
+  "Waffle_Man": {
+    "wide": {
+      "sizes": [
+        480,
+        720,
+        1200
+      ],
+      "ratio": 1.7778,
+      "base": "/img/wide/Waffle_Man"
+    }
+  },
+  "bubble_waffle_with_ice_cream__fruit": {
+    "wide": {
+      "sizes": [
+        480,
+        816
+      ],
+      "ratio": 1.7778,
+      "base": "/img/wide/bubble_waffle_with_ice_cream__fruit"
+    }
+  },
+  "cravings": {
+    "wide": {
+      "sizes": [
+        480,
+        720,
+        900
+      ],
+      "ratio": 1.7778,
+      "base": "/img/wide/cravings"
+    }
+  },
+  "crepe": {
+    "wide": {
+      "sizes": [
+        480,
+        720,
+        1080
+      ],
+      "ratio": 1.7778,
+      "base": "/img/wide/crepe"
+    }
+  },
+  "cup": {
+    "tall": {
+      "sizes": [
+        480,
+        720,
+        900
+      ],
+      "ratio": 0.8,
+      "base": "/img/tall/cup"
+    }
+  },
+  "inside_the_cafe": {
+    "wide": {
+      "sizes": [
+        480,
+        720,
+        900
+      ],
+      "ratio": 1.7778,
+      "base": "/img/wide/inside_the_cafe"
+    },
+    "tall": {
+      "sizes": [
+        480,
+        720,
+        900
+      ],
+      "ratio": 0.8,
+      "base": "/img/tall/inside_the_cafe"
+    }
+  },
+  "lunch_combo": {
+    "promo": {
+      "sizes": [
+        480,
+        720,
+        1080
+      ],
+      "ratio": 0.7994,
+      "base": "/img/promo/lunch_combo"
+    }
+  },
+  "main_chraracter": {
+    "wide": {
+      "sizes": [
+        480,
+        720,
+        1080
+      ],
+      "ratio": 1.7778,
+      "base": "/img/wide/main_chraracter"
+    },
+    "tall": {
+      "sizes": [
+        480,
+        720,
+        864
+      ],
+      "ratio": 0.8,
+      "base": "/img/tall/main_chraracter"
+    }
+  }
+}
