@@ -6,10 +6,8 @@ import { useLocale } from '../i18n/LocaleProvider'
  * name and the price, which is how the design system asks for tabular data —
  * rules carrying the structure rather than fills.
  *
- * Prices are intentionally absent: there is no price data yet, so every row
- * shows the placeholder dash and the page carries a standing notice saying so.
- * When real prices arrive, add a `price` to the item in en.js / ka.js and it
- * renders in place of the dash with no change here.
+ * A few rows (the topping lists) are informational and carry no price; those
+ * fall back to the placeholder dash, with `priceNote` as hidden a11y text.
  */
 function MenuCategory({ category, dietary, priceNote, priceTbc }) {
   const { locale } = useLocale()
@@ -35,7 +33,7 @@ function MenuCategory({ category, dietary, priceNote, priceTbc }) {
                 {!item.price && <span className="visually-hidden">{priceNote}</span>}
               </span>
             </div>
-            <p className="menu-item__desc text-muted">{item.description}</p>
+            {item.description && <p className="menu-item__desc text-muted">{item.description}</p>}
             {item.tags?.length > 0 && (
               <ul className="menu-item__tags">
                 {item.tags.map((tag) => (
@@ -61,8 +59,6 @@ export default function MenuList() {
         <strong className="menu-notice__title">{t.menu.notice.title}</strong>
         <p className="menu-notice__body">{t.menu.notice.body}</p>
       </aside>
-
-      <p className="menu-list__price-note text-muted">{t.menu.priceNote}</p>
 
       {t.menu.categories.map((category) => (
         <MenuCategory
