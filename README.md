@@ -139,6 +139,25 @@ against what the counter actually calls them.
 - **The Google review quote and reviewer name** are reproduced from the public
   Google Business Profile. Confirm this use is approved before going live.
 
+## Deployment
+
+`vercel.json` configures the site for Vercel: Vite preset, `dist/` as output,
+and a catch-all rewrite to `index.html`. **The rewrite is not optional** —
+routing is client-side (`BrowserRouter`), so without it a direct hit or a
+refresh on `/about`, `/menu` or `/contact` returns a 404 from the CDN. Vercel
+checks the filesystem before applying rewrites, so real files under `/assets`,
+`/img` and `/fonts` are still served directly.
+
+Hashed build output and the self-hosted fonts are cached for a year; the
+generated crops in `/img` get a day plus stale-while-revalidate, because their
+filenames are stable and re-running `npm run images` would otherwise be
+invisible to anyone who has already loaded the page.
+
+To connect the repository, import it at
+[vercel.com/new](https://vercel.com/new) and pick `KidashiDesign/glaze`. No
+build settings need changing — `vercel.json` supplies them. Every branch then
+gets a preview URL and `main` gets the production one.
+
 ## Verification
 
 Production build is clean; all generated images and fonts land in `dist/`. Pages
