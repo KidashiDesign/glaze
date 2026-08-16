@@ -190,6 +190,7 @@ export default {
     categories: [
       {
         id: 'desserts',
+        image: 'Belgian_Waffle',
         title: 'Десерты',
         note: 'К каждому десерту — соус, фруктовый топпинг и посыпка на выбор.',
         items: [
@@ -227,6 +228,7 @@ export default {
       },
       {
         id: 'iceCream',
+        image: 'bubble_waffle_with_ice_cream__fruit',
         title: 'Мороженое',
         note: 'Один шарик.',
         items: [
@@ -239,6 +241,7 @@ export default {
       },
       {
         id: 'toppings',
+        image: 'Cinnamon_Roll',
         title: 'Топпинги',
         note: 'В каждый десерт уже включены один соус, один фруктовый топпинг и одна посыпка. Дополнительно — за небольшую доплату.',
         items: [
@@ -281,6 +284,7 @@ export default {
       },
       {
         id: 'sandwiches',
+        image: 'Sandwich',
         title: 'Сэндвичи',
         note: null,
         items: [
@@ -291,6 +295,7 @@ export default {
       },
       {
         id: 'combo',
+        image: 'Take_Away',
         title: 'Комбо',
         note: null,
         items: [
@@ -326,6 +331,7 @@ export default {
       },
       {
         id: 'lunch',
+        image: 'Breakfast',
         title: 'Ланч-меню',
         note: null,
         items: [
@@ -339,6 +345,7 @@ export default {
       },
       {
         id: 'kids',
+        image: 'crepe',
         title: 'Детское меню',
         note: null,
         items: [
@@ -352,6 +359,7 @@ export default {
       },
       {
         id: 'hotDrinks',
+        image: 'Coffee',
         title: 'Горячие напитки',
         note: null,
         items: [
@@ -365,6 +373,7 @@ export default {
       },
       {
         id: 'coldDrinks',
+        image: 'cravings',
         title: 'Холодные напитки',
         note: null,
         items: [

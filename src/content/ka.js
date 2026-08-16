@@ -191,6 +191,7 @@ export default {
     categories: [
       {
         id: 'desserts',
+        image: 'Belgian_Waffle',
         title: 'დესერტები',
         note: 'თითოეულ დესერტს ერთვის სოუსი, ხილის დანამატი და საყრელი დანამატი თქვენი არჩევანით.',
         items: [
@@ -228,6 +229,7 @@ export default {
       },
       {
         id: 'iceCream',
+        image: 'bubble_waffle_with_ice_cream__fruit',
         title: 'ნაყინი',
         note: 'ერთი ბურთულა.',
         items: [
@@ -240,6 +242,7 @@ export default {
       },
       {
         id: 'toppings',
+        image: 'Cinnamon_Roll',
         title: 'დანამატები',
         note: 'თითოეულ დესერტში უკვე შედის ერთი სოუსი, ერთი ხილის დანამატი და ერთი საყრელი დანამატი. დამატებითი — მცირე საფასურით.',
         items: [
@@ -282,6 +285,7 @@ export default {
       },
       {
         id: 'sandwiches',
+        image: 'Sandwich',
         title: 'სენდვიჩები',
         note: null,
         items: [
@@ -292,6 +296,7 @@ export default {
       },
       {
         id: 'combo',
+        image: 'Take_Away',
         title: 'კომბო',
         note: null,
         items: [
@@ -327,6 +332,7 @@ export default {
       },
       {
         id: 'lunch',
+        image: 'Breakfast',
         title: 'ლანჩის მენიუ',
         note: null,
         items: [
@@ -340,6 +346,7 @@ export default {
       },
       {
         id: 'kids',
+        image: 'crepe',
         title: 'საბავშვო მენიუ',
         note: null,
         items: [
@@ -353,6 +360,7 @@ export default {
       },
       {
         id: 'hotDrinks',
+        image: 'Coffee',
         title: 'ცხელი სასმელები',
         note: null,
         items: [
@@ -366,6 +374,7 @@ export default {
       },
       {
         id: 'coldDrinks',
+        image: 'cravings',
         title: 'ცივი სასმელები',
         note: null,
         items: [
