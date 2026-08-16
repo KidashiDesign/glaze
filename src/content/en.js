@@ -400,11 +400,11 @@ export default {
       // Confirm it is still current before publishing.
       address: '9 Alexandr Pushkin St, Tbilisi, Georgia',
       hoursLabel: 'Opening hours',
-      hours: '[PLACEHOLDER: full opening hours] · Happy Hours 09:30–14:00 daily, 15% off',
+      hours: 'Happy Hours 09:30–14:00 daily, 15% off',
       phoneLabel: 'Phone',
-      phone: '[PLACEHOLDER: +995 ...]',
+      phone: '+995 599 79 98 06',
       emailLabel: 'Email',
-      email: '[PLACEHOLDER: hello@example.ge]',
+      email: '',
       mapCta: 'Open in Google Maps',
     },
 
@@ -414,7 +414,7 @@ export default {
       body: 'A waffle and ice cream bar for a wedding, a dessert table for an office party, or a custom coffee setup for a launch. Send us the date, the headcount and the venue, and we will come back with options and pricing.',
       cta: 'Send an Enquiry',
       ctaNote:
-        '[PLACEHOLDER: This button needs a destination — an email address, a form, or a WhatsApp link.]',
+        '+995 599 79 98 06',
     },
   },
 

@@ -24,7 +24,7 @@
 // client before this goes live outside the presentation.
 
 export const placeUrl =
-  'https://www.google.com/maps/place/Glaze+%E2%80%A2+Desserts+%26+Coffee/@41.6940419,44.7998449,17z/data=!4m8!3m7!1s0x40440d3b6539f44f:0xd27a24cbfd971247!8m2!3d41.6940379!4d44.8024198'
+  'https://www.google.com/maps/place/Glaze+%E2%80%A2+Desserts+%26+Coffee/@41.6940419,44.7998449,17z/data=!3m1!4b1!4m6!3m5!1s0x40440d3b6539f44f:0xd27a24cbfd971247!8m2!3d41.6940379!4d44.8024198!16s%2Fg%2F11njqq3gwz?entry=ttu&g_ep=EgoyMDI2MDgxMi4wIKXMDSoASAFQAw%3D%3D'
 
 export const fetchedAt = '2026-08-16'
 
