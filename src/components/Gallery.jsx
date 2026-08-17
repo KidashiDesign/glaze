@@ -3,7 +3,6 @@ import Picture from './Picture'
 import SectionHeading from './SectionHeading'
 import { galleryImages } from '../content/media'
 import { useLocale } from '../i18n/LocaleProvider'
-import { useRevealOnView } from '../animation/useRevealOnView'
 
 /** Lucide `arrow-left` / `arrow-right`. */
 function Arrow({ direction }) {
@@ -49,14 +48,8 @@ function OverlayIcons() {
  * drag handler only adds pointer-dragging, which the platform does not give us.
  */
 export default function Gallery() {
-  const { t, locale } = useLocale()
+  const { t } = useLocale()
   const scroller = useRef(null)
-  const revealRef = useRevealOnView({
-    threshold: 0.15,
-    stagger: 0.1,
-    resetKey: locale,
-    perItemObserve: false,
-  })
   const [atStart, setAtStart] = useState(true)
   const [atEnd, setAtEnd] = useState(false)
   const [activeIndex, setActiveIndex] = useState(0)
@@ -206,10 +199,7 @@ export default function Gallery() {
       </div>
 
       <ul
-        ref={(node) => {
-          scroller.current = node
-          revealRef.current = node
-        }}
+        ref={scroller}
         className="gallery__strip"
         tabIndex={0}
         aria-label={t.gallery.heading}
@@ -221,8 +211,7 @@ export default function Gallery() {
               itemRefs.current[i] = node
             }}
             data-gallery-item
-            data-reveal
-            className={`gallery__item reveal${i === activeIndex ? ' is-active' : ''}`}
+            className={`gallery__item${i === activeIndex ? ' is-active' : ''}`}
             style={{ '--dist': Math.abs(i - activeIndex) }}
           >
             <figure className="gallery__figure">
