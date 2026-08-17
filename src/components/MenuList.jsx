@@ -12,9 +12,8 @@ import { useLocale } from '../i18n/LocaleProvider'
  * fall back to the placeholder dash, with `priceNote` as hidden a11y text.
  *
  * Each category opens with a photo in a shallow, rounded frame that drifts
- * with a scroll parallax. The category title no longer overlays the photo,
- * so the section's accessible name comes from `aria-label` instead of a
- * heading, and the photo stays decorative (empty alt).
+ * with a scroll parallax. The category title sits below the photo as a
+ * left-aligned heading rather than overlaying the image.
  */
 function MenuCategory({ category, dietary, priceNote, priceTbc }) {
   const { locale } = useLocale()
@@ -22,7 +21,7 @@ function MenuCategory({ category, dietary, priceNote, priceTbc }) {
   const { frameRef, imageRef } = useParallaxImage()
 
   return (
-    <section ref={ref} className="menu-cat" aria-label={category.title}>
+    <section ref={ref} className="menu-cat" aria-labelledby={`cat-${category.id}`}>
       <div ref={frameRef} className="menu-cat__media reveal" data-reveal>
         <Picture
           ref={imageRef}
@@ -32,6 +31,10 @@ function MenuCategory({ category, dietary, priceNote, priceTbc }) {
           className="menu-cat__picture"
         />
       </div>
+
+      <h2 id={`cat-${category.id}`} className="h3 menu-cat__title reveal" data-reveal>
+        {category.title}
+      </h2>
 
       {category.note && (
         <p className="menu-cat__note text-muted reveal" data-reveal>
