@@ -959,39 +959,29 @@
   margin-top: var(--space-16);
 }
 
-/* The sources are 16:9 crops (see src/content/media.js), so the frame is
-   16:9 too. */
+/* The sources are 16:9 crops (see src/content/media.js), cropped shallower
+   still so the frame reads as a strip rather than a photo block. The picture
+   inside is oversized (see below) so it has room to drift without exposing
+   an edge of the frame. */
 .menu-cat__media {
   position: relative;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 21 / 9;
   border-radius: var(--radius-xl);
   overflow: hidden;
   background: var(--color-accent-100);
 }
 
-.menu-cat__picture,
+.menu-cat__picture {
+  position: absolute;
+  inset: -15% 0;
+  width: 100%;
+  height: 130%;
+}
+
 .menu-cat__picture .picture__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-/* The category title, centred over the photo in an oval of the brand accent
-   colour — the "corresponding colour" the badge is meant to pick up. */
-.menu-cat__badge {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-  max-width: 84%;
-  padding: 0.5em 1.6em;
-  border-radius: 999px;
-  background: var(--color-accent);
-  color: var(--color-ink);
-  text-align: center;
-  white-space: nowrap;
-  box-shadow: 0 12px 28px -8px rgb(0 0 0 / 0.45);
 }
 
 .menu-cat__note {
@@ -1005,12 +995,6 @@
 
 .menu-cat__media + .menu-cat__list {
   margin-top: var(--space-6);
-}
-
-@media (min-width: 640px) {
-  .menu-cat__badge {
-    padding: 0.6em 2.2em;
-  }
 }
 
 .menu-cat__list {

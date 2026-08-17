@@ -1,3 +1,4 @@
+import { forwardRef } from 'react'
 import { imageSource } from '../content/media'
 
 /**
@@ -10,17 +11,23 @@ import { imageSource } from '../content/media'
  *
  * A `tall` source can be supplied for viewports where a 16:9 crop would be
  * unusable — currently just the mobile hero.
+ *
+ * `ref` forwards to the `<picture>` element, so callers can animate it (e.g.
+ * a scroll parallax translate).
  */
-export default function Picture({
-  name,
-  alt,
-  variant = 'wide',
-  tallVariantBelow = null,
-  sizes = '100vw',
-  className = '',
-  priority = false,
-  plate = false,
-}) {
+const Picture = forwardRef(function Picture(
+  {
+    name,
+    alt,
+    variant = 'wide',
+    tallVariantBelow = null,
+    sizes = '100vw',
+    className = '',
+    priority = false,
+    plate = false,
+  },
+  ref,
+) {
   const wide = imageSource(name, variant)
   if (!wide) return null
 
@@ -42,7 +49,7 @@ export default function Picture({
   )
 
   return (
-    <picture className={`picture ${className}`.trim()}>
+    <picture ref={ref} className={`picture ${className}`.trim()}>
       {tall && (
         <source
           media={`(max-width: ${tallVariantBelow}px)`}
@@ -53,4 +60,6 @@ export default function Picture({
       {img}
     </picture>
   )
-}
+})
+
+export default Picture
