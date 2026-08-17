@@ -18,7 +18,7 @@ export default function Contact() {
     { label: details.addressLabel, value: details.address },
     { label: details.hoursLabel, value: details.hours },
     { label: details.phoneLabel, value: details.phone },
-    { label: details.emailLabel, value: details.email },
+
   ]
 
   return (
