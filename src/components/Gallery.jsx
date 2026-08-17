@@ -51,7 +51,12 @@ function OverlayIcons() {
 export default function Gallery() {
   const { t, locale } = useLocale()
   const scroller = useRef(null)
-  const revealRef = useRevealOnView({ threshold: 0.15, stagger: 0.1, resetKey: locale })
+  const revealRef = useRevealOnView({
+    threshold: 0.15,
+    stagger: 0.1,
+    resetKey: locale,
+    perItemObserve: false,
+  })
   const [atStart, setAtStart] = useState(true)
   const [atEnd, setAtEnd] = useState(false)
   const [activeIndex, setActiveIndex] = useState(0)
