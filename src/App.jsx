@@ -1,5 +1,6 @@
 import { useEffect, useLayoutEffect, useRef } from 'react'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { ReactLenis, useLenis } from 'lenis/react'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 import Home from './routes/Home'
@@ -22,10 +23,20 @@ function RouteChrome({ children }) {
   const { pathname } = useLocation()
   const { locale } = useLocale()
   const main = useRef(null)
+  const lenis = useLenis()
+
+  // Keeps GSAP ScrollTrigger updated on every Lenis scroll tick
+  useLenis(() => {
+    ScrollTrigger.update()
+  })
 
   useLayoutEffect(() => {
-    window.scrollTo(0, 0)
-  }, [pathname])
+    if (lenis) {
+      lenis.scrollTo(0, { immediate: true })
+    } else {
+      window.scrollTo(0, 0)
+    }
+  }, [pathname, lenis])
 
   useEffect(() => {
     // Two frames: one for React to commit, one for the browser to lay out and
@@ -88,10 +99,17 @@ function Shell() {
 }
 
 export default function App() {
+  // Prevent GSAP lag smoothing from fighting with Lenis scroll animation loops
+  useLayoutEffect(() => {
+    gsap.ticker.lagSmoothing(0)
+  }, [])
+
   return (
     <LocaleProvider>
       <BrowserRouter>
-        <Shell />
+        <ReactLenis root options={{ lerp: 0.08, smoothWheel: true }}>
+          <Shell />
+        </ReactLenis>
       </BrowserRouter>
     </LocaleProvider>
   )
