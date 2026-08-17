@@ -795,7 +795,6 @@
   list-style: none;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  scroll-padding-left: var(--gutter);
   overscroll-behavior-x: contain;
   scrollbar-width: none;
 }
@@ -812,7 +811,19 @@
 
 .gallery__item {
   flex: 0 0 82%;
-  scroll-snap-align: start;
+  scroll-snap-align: center;
+}
+
+/* Invisible flex siblings at each end of the strip, sized from JS
+   (--gallery-edge-pad, in Gallery.jsx) to exactly the scroll room the
+   first/last card needs to reach the strip's center like any interior card
+   can — without them, scrolling runs out before an edge card ever gets
+   there, so it could never become the sharp, active card the way interior
+   cards can. Sizing this with a flex sibling rather than container padding
+   keeps every card's own `flex-basis: N%` anchored to the same content-box
+   width regardless of the pad's size. */
+.gallery__spacer {
+  flex: 0 0 var(--gallery-edge-pad, 0px);
 }
 
 .gallery__figure {
