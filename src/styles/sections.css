@@ -1042,8 +1042,8 @@
 
 .menu-cat__title {
       position: absolute;
-      left: 30%;
-      bottom: -40px;
+      left: 50%;
+      bottom: 0px;
       
       /* Centers horizontally (-50%) and pushes exactly half its height down (50%) */
       transform: translate(-50%, 50%);

@@ -32,7 +32,7 @@ function MenuCategory({ category, dietary, priceNote, priceTbc }) {
         />
   
 
-      <h2 id={`cat-${category.id}`} className="h3 menu-cat__title reveal" data-reveal>
+      <h2 id={`cat-${category.id}`} className="h3 menu-cat__title">
         {category.title}
       </h2>
     </div>
