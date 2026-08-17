@@ -1,5 +1,6 @@
 import Picture from './Picture'
 import { useRevealOnView } from '../animation/useRevealOnView'
+import { useParallaxImage } from '../animation/useParallaxImage'
 import { useLocale } from '../i18n/LocaleProvider'
 
 /**
@@ -10,26 +11,26 @@ import { useLocale } from '../i18n/LocaleProvider'
  * A few rows (the topping lists) are informational and carry no price; those
  * fall back to the placeholder dash, with `priceNote` as hidden a11y text.
  *
- * Each category opens with a photo in a rounded frame, its title set as a
- * centred pill badge over the image — the title text is what the badge
- * shows, so the photo itself stays decorative (empty alt).
+ * Each category opens with a photo in a shallow, rounded frame that drifts
+ * with a scroll parallax. The category title no longer overlays the photo,
+ * so the section's accessible name comes from `aria-label` instead of a
+ * heading, and the photo stays decorative (empty alt).
  */
 function MenuCategory({ category, dietary, priceNote, priceTbc }) {
   const { locale } = useLocale()
   const ref = useRevealOnView({ threshold: 0.15, stagger: 0.06, resetKey: locale })
+  const { frameRef, imageRef } = useParallaxImage()
 
   return (
-    <section ref={ref} className="menu-cat" aria-labelledby={`cat-${category.id}`}>
-      <div className="menu-cat__media reveal" data-reveal>
+    <section ref={ref} className="menu-cat" aria-label={category.title}>
+      <div ref={frameRef} className="menu-cat__media reveal" data-reveal>
         <Picture
+          ref={imageRef}
           name={category.image}
           alt=""
           sizes="(min-width: 900px) 780px, 100vw"
           className="menu-cat__picture"
         />
-        <h2 id={`cat-${category.id}`} className="h3 menu-cat__badge">
-          {category.title}
-        </h2>
       </div>
 
       {category.note && (
