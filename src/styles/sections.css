@@ -816,6 +816,22 @@
   height: 100%;
   overflow: hidden;
   border-radius: var(--radius-md);
+  transform: scale(0.88);
+  filter: blur(4px);
+  transition: transform var(--dur-slow) var(--ease-out),
+    filter var(--dur-slow) var(--ease-out);
+  transition-delay: calc(var(--dist, 0) * 70ms);
+  will-change: transform, filter;
+}
+
+/* The centered card in the strip — sharp and at full size; its neighbors
+   stay scaled down and blurred, settling back in on a slight per-card delay
+   as the active card changes while scrolling. */
+.gallery__item.is-active .gallery__figure {
+  transform: scale(1);
+  filter: blur(0);
+  transition-delay: 0ms;
+  z-index: 1;
 }
 
 .gallery__picture,
@@ -898,6 +914,12 @@
   }
 
   .gallery__overlay {
+    transition: none;
+  }
+
+  .gallery__figure {
+    transform: none;
+    filter: none;
     transition: none;
   }
 }
