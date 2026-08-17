@@ -181,7 +181,7 @@ export default function Gallery() {
             <figure className="gallery__figure">
               <Picture
                 name={name}
-                alt={`[PLACEHOLDER: caption for ${name.replace(/_/g, ' ')}]`}
+                alt={name.replace(/_/g, ' ')}
                 sizes="(min-width: 1100px) 32vw, (min-width: 700px) 46vw, 82vw"
                 className="gallery__picture"
                 plate
@@ -192,9 +192,6 @@ export default function Gallery() {
               <div className="gallery__overlay">
                 <OverlayIcons />
               </div>
-              <figcaption className="gallery__caption">
-                [PLACEHOLDER: {name.replace(/_/g, ' ')}]
-              </figcaption>
             </figure>
           </li>
         ))}
