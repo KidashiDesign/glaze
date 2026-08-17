@@ -1133,7 +1133,7 @@
 .menu-item__price {
   flex: 0 0 auto;
   font-family: var(--font-heading);
-  font-size: 1.8rem;
+  font-size: 1.4rem;
 }
 
 .menu-item__price.is-tbc {
