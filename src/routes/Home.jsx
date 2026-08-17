@@ -73,7 +73,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section craft">
+      <section className="section section-tight craft">
         <div className="container">
           <FeatureBlock
             kicker={home.craft.kicker}
