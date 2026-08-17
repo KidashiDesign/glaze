@@ -1046,33 +1046,33 @@
 
 .menu-cat__title {
       position: absolute;
+      top: 50%;
       left: 50%;
-      bottom: 0;
-      
-      /* Centers horizontally (-50%) and pushes exactly half its height down (50%) */
-      transform: translate(-50%, 50%);
+
+      /* Centers the heading over the image on both axes */
+      transform: translate(-50%, -50%);
       z-index: 3;
-      
-      /* Oval shape and sizing */
-      width: 260px;
-      height: 80px;
-      border-radius: 50%; /* This forces the ellipse shape */
-      
+
+      /* Oval overlay: generous horizontal padding + fully rounded corners */
+      padding: 20px 40px;
+      border-radius: 100px;
+      white-space: nowrap;
+
       /* Match this background color to the .menu-items background */
-      background-color: var(--color-bg); 
-      
+      background-color: var(--color-bg);
+
       /* Center the text inside the oval */
       display: flex;
       align-items: center;
       justify-content: center;
-      
+
 
       color: var(--heading);
       text-transform: uppercase;
       letter-spacing: 0.3rem;
       font-size: 1.8rem;
       line-height: 93%;
-  
+
 }
 
 .menu-cat__media + .menu-cat__note {

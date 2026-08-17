@@ -12,8 +12,8 @@ import { useLocale } from '../i18n/LocaleProvider'
  * fall back to the placeholder dash, with `priceNote` as hidden a11y text.
  *
  * Each category opens with a photo in a shallow, rounded frame that drifts
- * with a scroll parallax. The category title sits below the photo as a
- * left-aligned heading rather than overlaying the image.
+ * with a scroll parallax. The category title overlays the photo, centered
+ * inside an oval badge.
  */
 function MenuCategory({ category, dietary, priceNote, priceTbc }) {
   const { locale } = useLocale()
