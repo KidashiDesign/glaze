@@ -1162,7 +1162,7 @@
 
 @media (min-width: 760px) {
   .footer__inner {
-    grid-template-columns: 1.6fr 1fr 1fr 1fr;
+    grid-template-columns: 1.6fr 190px 1fr 1fr;
     gap: var(--space-8);
   }
 }
