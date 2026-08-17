@@ -942,13 +942,47 @@
 
 /* ── menu ────────────────────────────────────────────────────────────────── */
 
+
+/* 1. Define the inversion keyframes */
+@keyframes invert-on-scroll {
+  0%, 100% {
+    background: var(--color-accent-100);
+    color: var(--color-text, #111); /* Add your default text color here */
+  }
+  50% {
+    background: var(--color-accent);
+    color: var(--color-accent-100); /* Inverted text color */
+  }
+}
+
 .menu-notice {
   padding: var(--space-4);
   border: 1px dashed var(--color-accent);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-xl);
   background: var(--color-accent-100);
   margin-bottom: var(--space-8);
+  
+  /* 2. Apply the animation (duration doesn't matter, scroll position drives it) */
+  animation: invert-on-scroll linear both;
+  
+  /* 3. Bind the animation timeline to the element's view in the scrollport */
+  animation-timeline: view();
+  
+  /* 4. Optional: Control exactly when the animation triggers */
+  /* 'cover 0%' means the moment it enters the screen, 'cover 100%' means the moment it leaves */
+  animation-range: cover 0% cover 100%; 
 }
+@keyframes invert-on-scroll {
+  0%, 10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100% {
+    background: var(--color-accent-100);
+    color: var(--color-text, #111);
+  }
+  5%, 15%, 25%, 35%, 45%, 55%, 65%, 75%, 85%, 95% {
+    background: var(--color-accent);
+    color: var(--color-accent-100);
+  }
+}
+
 
 .menu-notice__title {
   display: block;
@@ -956,7 +990,9 @@
   font-size: 0.95rem;
   color: var(--color-accent-800);
   margin-bottom: var(--space-1);
+  border-radius: var(--radius-xl);
 }
+
 
 .menu-notice__body {
   margin: 0;
