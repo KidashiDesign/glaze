@@ -984,6 +984,15 @@
   object-fit: cover;
 }
 
+.menu-cat__title {
+  margin: var(--space-4) 0 0;
+  text-align: left;
+}
+
+.menu-cat__title + .menu-cat__note {
+  margin-top: var(--space-2);
+}
+
 .menu-cat__note {
   margin: var(--space-4) 0 0;
   font-size: 0.88rem;
@@ -993,7 +1002,7 @@
   margin-top: var(--space-6);
 }
 
-.menu-cat__media + .menu-cat__list {
+.menu-cat__title + .menu-cat__list {
   margin-top: var(--space-6);
 }
 
@@ -1028,7 +1037,7 @@
 .menu-item__price {
   flex: 0 0 auto;
   font-family: var(--font-heading);
-  font-size: 1.05rem;
+  font-size: 1.2rem;
 }
 
 .menu-item__price.is-tbc {
