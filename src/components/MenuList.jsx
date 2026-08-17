@@ -30,12 +30,12 @@ function MenuCategory({ category, dietary, priceNote, priceTbc }) {
           sizes="(min-width: 900px) 780px, 100vw"
           className="menu-cat__picture"
         />
-      </div>
+  
 
       <h2 id={`cat-${category.id}`} className="h3 menu-cat__title reveal" data-reveal>
         {category.title}
       </h2>
-
+    </div>
       {category.note && (
         <p className="menu-cat__note text-muted reveal" data-reveal>
           {category.note}
