@@ -62,6 +62,28 @@ export default function Gallery() {
     setAtEnd(el.scrollLeft >= el.scrollWidth - el.clientWidth - 2)
   }, [])
 
+  /** Reserves just enough extra scroll room, via the leading/trailing
+   *  spacers, for the first card to reach the strip's exact center at
+   *  minimum scroll — without it, scrolling runs out before an edge card
+   *  ever gets centered, so it could never become the sharp, active card
+   *  the way interior cards can. By the strip's own left-right symmetry,
+   *  the same amount also centers the last card at maximum scroll. The
+   *  amount needed is measured directly (rather than derived from card
+   *  width/gutter/gap) so it stays correct at every breakpoint, from the
+   *  single-card mobile strip to the 3-up desktop one, without
+   *  hard-coding the layout's numbers here. */
+  const updateEdgePadding = useCallback(() => {
+    const el = scroller.current
+    const first = itemRefs.current[0]
+    if (!el || !first) return
+    el.style.setProperty('--gallery-edge-pad', '0px')
+    const viewportCenter = el.getBoundingClientRect().left + el.clientWidth / 2
+    const firstRect = first.getBoundingClientRect()
+    const firstCenter = firstRect.left + firstRect.width / 2
+    const pad = Math.max(0, viewportCenter - firstCenter - el.scrollLeft)
+    el.style.setProperty('--gallery-edge-pad', `${pad}px`)
+  }, [])
+
   /** Whichever card sits closest to the strip's horizontal center is "active" —
    *  it gets scaled up while its neighbors shrink and blur back out. */
   const updateActiveIndex = useCallback(() => {
@@ -95,15 +117,20 @@ export default function Gallery() {
         ticking = false
       })
     }
+    const onResize = () => {
+      updateEdgePadding()
+      onScrollOrResize()
+    }
+    updateEdgePadding()
     updateEdges()
     updateActiveIndex()
     el.addEventListener('scroll', onScrollOrResize, { passive: true })
-    window.addEventListener('resize', onScrollOrResize)
+    window.addEventListener('resize', onResize)
     return () => {
       el.removeEventListener('scroll', onScrollOrResize)
-      window.removeEventListener('resize', onScrollOrResize)
+      window.removeEventListener('resize', onResize)
     }
-  }, [updateEdges, updateActiveIndex])
+  }, [updateEdges, updateActiveIndex, updateEdgePadding])
 
   /** One card plus its gap — the distance a button press should travel. */
   const step = () => {
@@ -204,6 +231,7 @@ export default function Gallery() {
         tabIndex={0}
         aria-label={t.gallery.heading}
       >
+        <li aria-hidden="true" className="gallery__spacer" />
         {galleryImages.map((name, i) => (
           <li
             key={name}
@@ -231,6 +259,7 @@ export default function Gallery() {
             </figure>
           </li>
         ))}
+        <li aria-hidden="true" className="gallery__spacer" />
       </ul>
 
       <div className="container gallery__foot">
