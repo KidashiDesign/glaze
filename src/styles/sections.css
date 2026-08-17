@@ -502,11 +502,16 @@
 
 .numbered__num {
   display: block;
+  text-align: left;
   font-family: var(--font-heading);
-  font-size: 0.78rem;
+  font-size: 2.34rem;
   letter-spacing: 0.14em;
-  color: var(--color-accent-700);
   margin-bottom: var(--space-3);
+  background: linear-gradient(to top, transparent 0%, var(--color-accent-700) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 .numbered__title {
