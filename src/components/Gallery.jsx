@@ -54,6 +54,8 @@ export default function Gallery() {
   const revealRef = useRevealOnView({ threshold: 0.15, stagger: 0.1, resetKey: locale })
   const [atStart, setAtStart] = useState(true)
   const [atEnd, setAtEnd] = useState(false)
+  const [activeIndex, setActiveIndex] = useState(0)
+  const itemRefs = useRef([])
 
   const updateEdges = useCallback(() => {
     const el = scroller.current
@@ -62,17 +64,48 @@ export default function Gallery() {
     setAtEnd(el.scrollLeft >= el.scrollWidth - el.clientWidth - 2)
   }, [])
 
+  /** Whichever card sits closest to the strip's horizontal center is "active" —
+   *  it gets scaled up while its neighbors shrink and blur back out. */
+  const updateActiveIndex = useCallback(() => {
+    const el = scroller.current
+    if (!el) return
+    const center = el.getBoundingClientRect().left + el.clientWidth / 2
+    let closest = 0
+    let closestDist = Infinity
+    itemRefs.current.forEach((node, i) => {
+      if (!node) return
+      const rect = node.getBoundingClientRect()
+      const dist = Math.abs(rect.left + rect.width / 2 - center)
+      if (dist < closestDist) {
+        closestDist = dist
+        closest = i
+      }
+    })
+    setActiveIndex(closest)
+  }, [])
+
   useEffect(() => {
     const el = scroller.current
     if (!el) return
-    updateEdges()
-    el.addEventListener('scroll', updateEdges, { passive: true })
-    window.addEventListener('resize', updateEdges)
-    return () => {
-      el.removeEventListener('scroll', updateEdges)
-      window.removeEventListener('resize', updateEdges)
+    let ticking = false
+    const onScrollOrResize = () => {
+      if (ticking) return
+      ticking = true
+      requestAnimationFrame(() => {
+        updateEdges()
+        updateActiveIndex()
+        ticking = false
+      })
     }
-  }, [updateEdges])
+    updateEdges()
+    updateActiveIndex()
+    el.addEventListener('scroll', onScrollOrResize, { passive: true })
+    window.addEventListener('resize', onScrollOrResize)
+    return () => {
+      el.removeEventListener('scroll', onScrollOrResize)
+      window.removeEventListener('resize', onScrollOrResize)
+    }
+  }, [updateEdges, updateActiveIndex])
 
   /** One card plus its gap — the distance a button press should travel. */
   const step = () => {
@@ -177,7 +210,16 @@ export default function Gallery() {
         aria-label={t.gallery.heading}
       >
         {galleryImages.map((name, i) => (
-          <li key={name} data-gallery-item data-reveal className="gallery__item reveal">
+          <li
+            key={name}
+            ref={(node) => {
+              itemRefs.current[i] = node
+            }}
+            data-gallery-item
+            data-reveal
+            className={`gallery__item reveal${i === activeIndex ? ' is-active' : ''}`}
+            style={{ '--dist': Math.abs(i - activeIndex) }}
+          >
             <figure className="gallery__figure">
               <Picture
                 name={name}

@@ -821,6 +821,22 @@
   height: 100%;
   overflow: hidden;
   border-radius: var(--radius-md);
+  transform: scale(0.88);
+  filter: blur(4px);
+  transition: transform var(--dur-slow) var(--ease-out),
+    filter var(--dur-slow) var(--ease-out);
+  transition-delay: calc(var(--dist, 0) * 70ms);
+  will-change: transform, filter;
+}
+
+/* The centered card in the strip — sharp and at full size; its neighbors
+   stay scaled down and blurred, settling back in on a slight per-card delay
+   as the active card changes while scrolling. */
+.gallery__item.is-active .gallery__figure {
+  transform: scale(1);
+  filter: blur(0);
+  transition-delay: 0ms;
+  z-index: 1;
 }
 
 .gallery__picture,
@@ -834,19 +850,6 @@
    overlay is desktop-only. */
 .gallery__overlay {
   display: none;
-}
-
-.gallery__caption {
-  position: absolute;
-  inset: auto 0 0;
-  padding: var(--space-2) var(--space-3);
-  font-size: 0.72rem;
-  color: var(--color-on-ink);
-  background: linear-gradient(
-    to top,
-    color-mix(in srgb, var(--color-ink) 85%, transparent),
-    transparent
-  );
 }
 
 .gallery__foot {
@@ -908,14 +911,6 @@
     gap: var(--space-4);
   }
 
-  .gallery__caption {
-    opacity: 0;
-    transition: opacity var(--dur-base) var(--ease-out);
-  }
-
-  .gallery__figure:hover .gallery__caption {
-    opacity: 1;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -923,8 +918,13 @@
     scroll-behavior: auto;
   }
 
-  .gallery__overlay,
-  .gallery__caption {
+  .gallery__overlay {
+    transition: none;
+  }
+
+  .gallery__figure {
+    transform: none;
+    filter: none;
     transition: none;
   }
 }
