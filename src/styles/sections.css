@@ -1024,31 +1024,28 @@
       position: absolute;
       left: 50%;
       bottom: 0;
-      
-      /* Centers horizontally (-50%) and pushes exactly half its height down (50%) */
       transform: translate(-50%, 50%);
       z-index: 3;
       
-      /* Oval shape and sizing */
-      width: 260px;
-      height: 80px;
-      border-radius: 50%; /* This forces the ellipse shape */
+      /* Flexible width adjustments */
+      width: max-content;      /* Allows the container to grow/shrink with text */
+      padding: 0 60px;         /* Horizontal space to keep text clear of the curves */
+      white-space: nowrap;     /* Forces text to stay on a single line */
       
-      /* Match this background color to the .menu-items background */
+      height: 80px;
+      border-radius: 50%;      /* Keeps the true ellipse shape */
+      
       background-color: var(--color-bg); 
       
-      /* Center the text inside the oval */
       display: flex;
       align-items: center;
       justify-content: center;
-      
 
       color: var(--heading);
       text-transform: uppercase;
       letter-spacing: 0.3rem;
       font-size: 1.8rem;
       line-height: 93%;
-  
 }
 
 .menu-cat__media + .menu-cat__note {
