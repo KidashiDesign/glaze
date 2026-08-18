@@ -43,7 +43,12 @@ export default function Home() {
           />
         </div>
       </section>
-
+      <section className="section section-tight usps">
+        <div className="container">
+          <SectionHeading kicker={home.usps.kicker} heading={home.usps.heading} />
+          <NumberedList items={home.usps.items} />
+        </div>
+      </section>
       {/* Intro — twin images drifting at different rates beside the copy. */}
       <section className="section intro">
         <div className="container grid grid-2 intro__grid">
@@ -81,12 +86,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section section-tight usps">
-        <div className="container">
-          <SectionHeading kicker={home.usps.kicker} heading={home.usps.heading} />
-          <NumberedList items={home.usps.items} />
-        </div>
-      </section>
+
 
       <section className="section section-tight menu-teaser">
         <div className="container">
