@@ -374,7 +374,7 @@ export default {
       },
       {
         id: 'coldDrinks',
-        image: 'cravings',
+        image: 'Milk_Shake',
         title: 'ცივი სასმელები',
         note: null,
         items: [

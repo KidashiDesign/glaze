@@ -117,6 +117,17 @@
       "base": "/img/promo/Happy_Hours"
     }
   },
+  "Milk_Shake": {
+    "wide": {
+      "sizes": [
+        480,
+        720,
+        1000
+      ],
+      "ratio": 1.7778,
+      "base": "/img/wide/Milk_Shake"
+    }
+  },
   "Mood": {
     "tall": {
       "sizes": [

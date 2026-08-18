@@ -375,7 +375,7 @@ export default {
       },
       {
         id: 'coldDrinks',
-        image: 'cravings',
+        image: 'Milk_Shake',
         title: 'Cold Drinks',
         note: null,
         items: [

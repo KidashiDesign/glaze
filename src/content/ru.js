@@ -373,7 +373,7 @@ export default {
       },
       {
         id: 'coldDrinks',
-        image: 'cravings',
+        image: 'Milk_Shake',
         title: 'Холодные напитки',
         note: null,
         items: [
