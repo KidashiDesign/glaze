@@ -123,11 +123,7 @@ export default function Hero({
         )}
       </div>
 
-      {size === 'full' && (
-        <span className="hero__scroll-hint" data-hero-fade aria-hidden="true">
-          {t.common.scrollHint}
-        </span>
-      )}
+
 
       {/* The photograph carries meaning for sighted users but is decorative
           relative to the headline, so its description lives here rather than in
