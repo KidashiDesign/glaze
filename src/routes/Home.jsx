@@ -29,6 +29,8 @@ export default function Home() {
         secondaryCta={{ to: '/contact', label: home.hero.ctaSecondary }}
       />
 
+      <Reviews />
+
       {/* Intro — twin images drifting at different rates beside the copy. */}
       <section className="section intro">
         <div className="container grid grid-2 intro__grid">
@@ -100,8 +102,6 @@ export default function Home() {
           />
         </div>
       </section>
-
-      <Reviews />
 
       <section className="section events section-ink">
         <div className="container">
