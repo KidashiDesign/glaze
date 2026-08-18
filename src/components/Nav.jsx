@@ -90,39 +90,41 @@ export default function Nav() {
   }, [open])
 
   return (
-    <header className={`nav-bar ${solid || open ? 'is-solid' : ''}`}>
-      <div className="nav-bar__inner container">
-        <NavLink to="/" className="nav-bar__brand" aria-label={t.brand.name}>
-          <span className="nav-bar__brand-name">{t.brand.name}</span>
-          <span className="nav-bar__brand-tagline">{t.brand.tagline}</span>
-        </NavLink>
-
-        <nav className="nav-bar__links" aria-label={t.nav.menu}>
-          {links.map((link) => (
-            <NavLink key={link.to} to={link.to} end={link.end} className="nav-bar__link">
-              {link.label}
-            </NavLink>
-          ))}
-        </nav>
-
-        <div className="nav-bar__actions">
-          <LanguageSwitch locale={locale} setLocale={setLocale} label={t.nav.languageLabel} />
-          <NavLink to="/contact" className="btn btn-primary nav-bar__cta">
-            {t.nav.cta}
+    <>
+      <header className={`nav-bar ${solid || open ? 'is-solid' : ''}`}>
+        <div className="nav-bar__inner container">
+          <NavLink to="/" className="nav-bar__brand" aria-label={t.brand.name}>
+            <span className="nav-bar__brand-name">{t.brand.name}</span>
+            <span className="nav-bar__brand-tagline">{t.brand.tagline}</span>
           </NavLink>
-          <button
-            ref={toggleRef}
-            type="button"
-            className={`nav-bar__toggle ${open ? 'is-open' : ''}`}
-            aria-expanded={open}
-            aria-controls="nav-overlay"
-            aria-label={open ? t.nav.closeMenu : t.nav.openMenu}
-            onClick={() => setOpen((v) => !v)}
-          >
-            <span className="nav-bar__burger" aria-hidden="true" />
-          </button>
+
+          <nav className="nav-bar__links" aria-label={t.nav.menu}>
+            {links.map((link) => (
+              <NavLink key={link.to} to={link.to} end={link.end} className="nav-bar__link">
+                {link.label}
+              </NavLink>
+            ))}
+          </nav>
+
+          <div className="nav-bar__actions">
+            <LanguageSwitch locale={locale} setLocale={setLocale} label={t.nav.languageLabel} />
+            <NavLink to="/contact" className="btn btn-primary nav-bar__cta">
+              {t.nav.cta}
+            </NavLink>
+            <button
+              ref={toggleRef}
+              type="button"
+              className={`nav-bar__toggle ${open ? 'is-open' : ''}`}
+              aria-expanded={open}
+              aria-controls="nav-overlay"
+              aria-label={open ? t.nav.closeMenu : t.nav.openMenu}
+              onClick={() => setOpen((v) => !v)}
+            >
+              <span className="nav-bar__burger" aria-hidden="true" />
+            </button>
+          </div>
         </div>
-      </div>
+      </header>
 
       {open && (
         <div id="nav-overlay" ref={overlay} className="nav-overlay">
@@ -147,7 +149,7 @@ export default function Nav() {
           </nav>
         </div>
       )}
-    </header>
+    </>
   )
 }
 
