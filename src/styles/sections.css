@@ -279,11 +279,6 @@
   color: var(--color-accent-700);
 }
 
-.nav-overlay__cta {
-  align-self: start;
-  margin-top: var(--space-3);
-}
-
 .nav-overlay__meta {
   margin: 0;
   font-size: 0.85rem;
