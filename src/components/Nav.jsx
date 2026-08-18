@@ -108,9 +108,7 @@ export default function Nav() {
 
           <div className="nav-bar__actions">
             <LanguageSwitch locale={locale} setLocale={setLocale} label={t.nav.languageLabel} />
-            <NavLink to="/contact" className="btn btn-primary nav-bar__cta">
-              {t.nav.cta}
-            </NavLink>
+
             <button
               ref={toggleRef}
               type="button"
