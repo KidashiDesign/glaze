@@ -415,6 +415,7 @@ export default {
       emailLabel: 'Email',
       email: '',
       mapCta: 'Open in Google Maps',
+      mapTitle: 'Map showing Glaze — Desserts & Coffee in Tbilisi',
     },
 
     events: {
