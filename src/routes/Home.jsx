@@ -29,6 +29,19 @@ export default function Home() {
         secondaryCta={{ to: '/contact', label: home.hero.ctaSecondary }}
       />
 
+      <section className="section section-tight craft">
+        <div className="container">
+          <FeatureBlock
+            kicker={home.craft.kicker}
+            heading={home.craft.heading}
+            body={home.craft.body}
+            cta={{ to: '/menu', label: home.craft.cta }}
+            image={media.craft}
+            imageAlt="[PLACEHOLDER: Image description]"
+          />
+        </div>
+      </section>
+
       {/* Intro — twin images drifting at different rates beside the copy. */}
       <section className="section intro">
         <div className="container grid grid-2 intro__grid">
@@ -70,19 +83,6 @@ export default function Home() {
         <div className="container">
           <SectionHeading kicker={home.usps.kicker} heading={home.usps.heading} />
           <NumberedList items={home.usps.items} />
-        </div>
-      </section>
-
-      <section className="section section-tight craft">
-        <div className="container">
-          <FeatureBlock
-            kicker={home.craft.kicker}
-            heading={home.craft.heading}
-            body={home.craft.body}
-            cta={{ to: '/menu', label: home.craft.cta }}
-            image={media.craft}
-            imageAlt="[PLACEHOLDER: Image description]"
-          />
         </div>
       </section>
 
