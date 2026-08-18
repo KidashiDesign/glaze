@@ -413,6 +413,7 @@ export default {
       emailLabel: 'ელ. ფოსტა',
       email: '[PLACEHOLDER: hello@example.ge]',
       mapCta: 'გახსნა Google Maps-ში',
+      mapTitle: 'რუკა — Glaze Desserts & Coffee, თბილისი',
     },
 
     events: {

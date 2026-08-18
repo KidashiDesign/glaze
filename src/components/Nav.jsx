@@ -140,9 +140,6 @@ export default function Nav() {
                 {link.label}
               </NavLink>
             ))}
-            <NavLink to="/contact" data-overlay-item className="btn btn-primary btn-lg nav-overlay__cta">
-              {t.nav.cta}
-            </NavLink>
             <p data-overlay-item className="nav-overlay__meta text-muted">
               {t.brand.city}
             </p>

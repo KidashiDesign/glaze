@@ -2,7 +2,7 @@ import Hero from '../components/Hero'
 import SectionHeading from '../components/SectionHeading'
 import FeatureBlock from '../components/FeatureBlock'
 import { media } from '../content/media'
-import { placeUrl } from '../content/reviews'
+import { placeUrl, mapEmbedUrl } from '../content/reviews'
 import { useLocale } from '../i18n/LocaleProvider'
 import { usePageMeta } from '../hooks/usePageMeta'
 import { useRevealOnView } from '../animation/useRevealOnView'
@@ -44,6 +44,16 @@ export default function Contact() {
               </div>
             ))}
           </dl>
+
+          <div className="contact__map">
+            <iframe
+              src={mapEmbedUrl}
+              title={details.mapTitle}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
 
           <a className="btn btn-primary btn-lg" href={placeUrl} target="_blank" rel="noopener noreferrer">
             {details.mapCta}

@@ -411,6 +411,7 @@ export default {
       emailLabel: 'Эл. почта',
       email: '[PLACEHOLDER: hello@example.ge]',
       mapCta: 'Открыть в Google Maps',
+      mapTitle: 'Карта — Glaze Desserts & Coffee, Тбилиси',
     },
 
     events: {

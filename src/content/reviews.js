@@ -26,6 +26,10 @@
 export const placeUrl =
   'https://www.google.com/maps/place/Glaze+%E2%80%A2+Desserts+%26+Coffee/@41.6940419,44.7998449,17z/data=!3m1!4b1!4m6!3m5!1s0x40440d3b6539f44f:0xd27a24cbfd971247!8m2!3d41.6940379!4d44.8024198!16s%2Fg%2F11njqq3gwz?entry=ttu&g_ep=EgoyMDI2MDgxMi4wIKXMDSoASAFQAw%3D%3D'
 
+// No-API-key embed: interactive, pannable/zoomable, pinned to the same
+// coordinates as placeUrl above.
+export const mapEmbedUrl = 'https://www.google.com/maps?q=41.6940379,44.8024198&z=17&output=embed'
+
 export const fetchedAt = '2026-08-16'
 
 export const reviews = [
