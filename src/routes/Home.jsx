@@ -29,6 +29,8 @@ export default function Home() {
         secondaryCta={{ to: '/contact', label: home.hero.ctaSecondary }}
       />
 
+      <Reviews />
+
       <section className="section section-tight craft">
         <div className="container">
           <FeatureBlock
@@ -100,8 +102,6 @@ export default function Home() {
           />
         </div>
       </section>
-
-      <Reviews />
 
       <section className="section events section-ink">
         <div className="container">
