@@ -36,7 +36,6 @@ export default {
 
   common: {
     skipToContent: 'Перейти к содержимому',
-    scrollHint: 'Прокрутите',
     priceTbc: '—',
     placeholderBadge: 'Заглушка',
     loading: 'Загрузка',

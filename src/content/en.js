@@ -37,7 +37,6 @@ export default {
 
   common: {
     skipToContent: 'Skip to content',
-    scrollHint: 'Scroll',
     priceTbc: '—',
     placeholderBadge: 'Placeholder',
     loading: 'Loading',

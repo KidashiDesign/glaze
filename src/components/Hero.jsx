@@ -25,7 +25,7 @@ export default function Hero({
   secondaryCta,
   size = 'full',
 }) {
-  const { locale, t } = useLocale()
+  const { locale } = useLocale()
   const root = useRef(null)
   const bg = useKenBurns()
 
@@ -122,12 +122,6 @@ export default function Hero({
           </div>
         )}
       </div>
-
-      {size === 'full' && (
-        <span className="hero__scroll-hint" data-hero-fade aria-hidden="true">
-          {t.common.scrollHint}
-        </span>
-      )}
 
       {/* The photograph carries meaning for sighted users but is decorative
           relative to the headline, so its description lives here rather than in

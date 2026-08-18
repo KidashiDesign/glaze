@@ -37,7 +37,6 @@ export default {
 
   common: {
     skipToContent: 'გადასვლა მთავარ კონტენტზე',
-    scrollHint: 'გადაახვიეთ',
     priceTbc: '—',
     placeholderBadge: 'დროებითი ტექსტი',
     loading: 'იტვირთება',

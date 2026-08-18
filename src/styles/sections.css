@@ -442,17 +442,6 @@
   border-color: color-mix(in srgb, var(--color-on-ink) 40%, transparent);
 }
 
-.hero__scroll-hint {
-  position: absolute;
-  left: 50%;
-  bottom: var(--space-4);
-  transform: translateX(-50%);
-  font-size: 0.62rem;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: var(--color-on-ink-muted);
-}
-
 @media (min-width: 860px) {
   .hero__body {
     max-width: var(--container);
