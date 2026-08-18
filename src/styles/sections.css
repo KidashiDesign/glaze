@@ -127,9 +127,11 @@
   line-height: 1.1;
 }
 
+/* Wordmark: the bold Georgian cut, same in every locale — the logo isn't
+   translated copy, so it doesn't follow :lang(ka)'s heading-font swap. */
 .nav-bar__brand-name {
-  font-family: var(--font-heading);
-  font-weight: var(--font-heading-weight);
+  font-family: 'Noto Serif Georgian', var(--font-heading);
+  font-weight: 600;
   font-size: 1.35rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;

@@ -40,6 +40,10 @@ const FAMILIES = [
     subsets: ['latin', 'latin-ext', 'cyrillic', 'cyrillic-ext'],
   },
   { name: 'Noto Serif Georgian', query: 'Noto+Serif+Georgian:wght@400;600', subsets: ['georgian'] },
+  // Latin-only, bold weight: the wordmark borrows this cut for the logo in
+  // every locale (see .nav-bar__brand-name), so "Glaze" needs Latin glyphs
+  // from the same family even though body/heading copy never does.
+  { name: 'Noto Serif Georgian', query: 'Noto+Serif+Georgian:wght@600', subsets: ['latin'] },
 ]
 
 /** Split a Google Fonts stylesheet into blocks tagged with their subset comment. */
