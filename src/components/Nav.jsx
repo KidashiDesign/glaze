@@ -94,8 +94,17 @@ export default function Nav() {
       <header className={`nav-bar ${solid || open ? 'is-solid' : ''}`}>
         <div className="nav-bar__inner container">
           <NavLink to="/" className="nav-bar__brand" aria-label={t.brand.name}>
-            <span className="nav-bar__brand-name">{t.brand.name}</span>
-            <span className="nav-bar__brand-tagline">{t.brand.tagline}</span>
+            <img
+              className="nav-bar__brand-logo"
+              src="/img/woofles-logo.png"
+              alt=""
+              width="40"
+              height="40"
+            />
+            <span className="nav-bar__brand-text">
+              <span className="nav-bar__brand-name">{t.brand.name}</span>
+              <span className="nav-bar__brand-tagline">{t.brand.tagline}</span>
+            </span>
           </NavLink>
 
           <nav className="nav-bar__links" aria-label={t.nav.menu}>

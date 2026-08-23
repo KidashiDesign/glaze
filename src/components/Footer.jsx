@@ -10,6 +10,7 @@ export default function Footer() {
     <footer className="footer section-ink">
       <div className="container footer__inner">
         <div className="footer__brand">
+          <img className="footer__logo" src="/img/woofles-logo.png" alt="" width="56" height="56" />
           <span className="footer__name">{t.brand.name}</span>
           <p className="footer__tagline text-muted">{t.footer.tagline}</p>
         </div>
