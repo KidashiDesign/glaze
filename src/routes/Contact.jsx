@@ -1,7 +1,8 @@
 import Hero from '../components/Hero'
 import SectionHeading from '../components/SectionHeading'
 import FeatureBlock from '../components/FeatureBlock'
-import { media } from '../content/media'
+import PhotoMosaic from '../components/PhotoMosaic'
+import { media, mosaicContact } from '../content/media'
 import { placeUrl, mapEmbedUrl } from '../content/reviews'
 import { useLocale } from '../i18n/LocaleProvider'
 import { usePageMeta } from '../hooks/usePageMeta'
@@ -59,6 +60,12 @@ export default function Contact() {
           <a className="btn btn-primary btn-lg" href={placeUrl} target="_blank" rel="noopener noreferrer">
             {details.mapCta}
           </a>
+        </div>
+      </section>
+
+      <section className="section section-tight">
+        <div className="container">
+          <PhotoMosaic images={mosaicContact} />
         </div>
       </section>
 

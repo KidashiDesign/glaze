@@ -67,11 +67,9 @@ export const promo = {
 }
 
 // The gallery — landscape crops only, ordered so close-ups and wider shots
-// alternate and the strip has rhythm as it scrolls.
-//
-// The second block is a later batch of originals, already landscape and at
-// higher source resolution (up to 1600px) than the first 23 — see the
-// resolution caveat in README. Same alternating rhythm.
+// alternate and the strip has rhythm as it scrolls. Kept to this original
+// batch; the later upload (see the mosaic sets below) is spread across the
+// site's other pages instead of piling everything into one strip.
 export const galleryImages = [
   'Taste_Woofles',
   'inside_the_cafe',
@@ -85,35 +83,49 @@ export const galleryImages = [
   'Breakfast',
   'Some_sweet',
   'cravings',
+]
 
+// The later batch of uploads, sorted into small per-page sets for the static
+// PhotoMosaic grid (see src/components/PhotoMosaic.jsx) instead of the
+// scrolling Gallery strip — so new photos land throughout the site rather
+// than all in one place. `american-fluffy-pancake`, `couple-in-cafe` and
+// `bubblewaffle-vanilla-icecream-topping` from the same batch are already
+// placed above via the `media` map and are not repeated here.
+export const mosaicHome = [
   'bubblewaffle-icecream-snickers',
   'cafe',
-  'walnut-bubblewaffle',
-  'couple-in-cafe',
-  'scream-bubble-waffle-ics',
-  'special-dog-waffle',
-  'blueberry-waffle',
   'coffe-mashine',
-  'kiwi-banana-crep',
+  'woman-coworking-cafe',
   'street-woman-bubble-icecream',
-  'chokolade-banana',
   'waffle-cafe',
   'banana-split-2',
-  'woman-coworking-cafe',
-  'bubblewaffle-vanilla-icecream-topping',
-  'american-fluffy-pancake',
-  'strwaberry-shake-deluxe',
+  'chokolade-banana',
+]
+
+export const mosaicAbout = [
+  'walnut-bubblewaffle',
+  'scream-bubble-waffle-ics',
+  'kiwi-banana-crep',
   'street-woman-bubble-icecream-two',
+  'blueberry-waffle',
+  'special-dog-waffle',
   'tuttifrutti-crap-coco',
+]
+
+export const mosaicMenu = [
+  'strwaberry-shake-deluxe',
   'marshmallow-shake',
   'waffle-coclate-sauce',
   'gummibear-icecup-premium',
+  'm-and-m-icecoffee',
+  'pancake-strawberry',
+]
+
+export const mosaicContact = [
   'rainbow-suprice-sup',
   'brezel-cacao-shake',
   'teracotta-strawberry-shake',
   'bubblewaffle-ice-two',
-  'm-and-m-icecoffee',
-  'pancake-strawberry',
   'banana-split',
   '3-portions-icecream',
 ]

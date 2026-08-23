@@ -5,9 +5,10 @@ import NumberedList from '../components/NumberedList'
 import FeatureBlock from '../components/FeatureBlock'
 import Reviews from '../components/Reviews'
 import Gallery from '../components/Gallery'
+import PhotoMosaic from '../components/PhotoMosaic'
 import ParallaxDrift from '../animation/ParallaxDrift'
 import Picture from '../components/Picture'
-import { media } from '../content/media'
+import { media, mosaicHome } from '../content/media'
 import { useLocale } from '../i18n/LocaleProvider'
 import { usePageMeta } from '../hooks/usePageMeta'
 
@@ -50,6 +51,13 @@ export default function Home() {
           <NumberedList items={home.usps.items} />
         </div>
       </section>
+
+      <section className="section section-tight">
+        <div className="container">
+          <PhotoMosaic images={mosaicHome} />
+        </div>
+      </section>
+
       {/* Intro — twin images drifting at different rates beside the copy. */}
       <section className="section intro">
         <div className="container grid grid-2 intro__grid">
