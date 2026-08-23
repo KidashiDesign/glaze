@@ -1,4 +1,15 @@
 {
+  "Belgian_Waffle": {
+    "wide": {
+      "sizes": [
+        480,
+        720,
+        1080
+      ],
+      "ratio": 1.7778,
+      "base": "/img/wide/Belgian_Waffle"
+    }
+  },
   "Breakfast": {
     "wide": {
       "sizes": [
