@@ -6,6 +6,43 @@ import { gsap, CONDITIONS } from '../animation/motion'
 import { useLocale } from '../i18n/LocaleProvider'
 
 /**
+ * Loops a background video with a soft crossfade at the seam: as playback
+ * nears the end it fades to the scrim, then fades back in once it has
+ * looped, so the cut from last frame to first frame is never visible.
+ */
+function useLoopingFade(fadeSeconds = 0.6) {
+  const ref = useRef(null)
+
+  useLayoutEffect(() => {
+    const el = ref.current
+    if (!el) return
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      el.pause()
+      return
+    }
+
+    el.style.transition = 'none'
+
+    let raf
+    const tick = () => {
+      if (el.duration) {
+        const remaining = el.duration - el.currentTime
+        const progressed = el.currentTime
+        const edge = Math.min(remaining, progressed, fadeSeconds)
+        el.style.opacity = String(Math.min(edge / fadeSeconds, 1))
+      }
+      raf = requestAnimationFrame(tick)
+    }
+    raf = requestAnimationFrame(tick)
+
+    return () => cancelAnimationFrame(raf)
+  }, [fadeSeconds])
+
+  return ref
+}
+
+/**
  * Page hero: full-bleed photograph under a dark scrim, with the headline
  * animating in on load.
  *
@@ -21,6 +58,7 @@ export default function Hero({
   lead,
   image,
   imageAlt,
+  video,
   primaryCta,
   secondaryCta,
   size = 'full',
@@ -28,6 +66,7 @@ export default function Hero({
   const { locale, t } = useLocale()
   const root = useRef(null)
   const bg = useKenBurns()
+  const videoRef = useLoopingFade()
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -74,14 +113,27 @@ export default function Hero({
     <section ref={root} className={`hero hero--${size}`}>
       <div className="hero__media" aria-hidden="true">
         <div ref={bg} className="hero__media-inner">
-          <Picture
-            name={image}
-            alt=""
-            tallVariantBelow={859}
-            sizes="100vw"
-            priority
-            className="hero__picture"
-          />
+          {video ? (
+            <video
+              ref={videoRef}
+              className="hero__video"
+              src={video}
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+            />
+          ) : (
+            <Picture
+              name={image}
+              alt=""
+              tallVariantBelow={859}
+              sizes="100vw"
+              priority
+              className="hero__picture"
+            />
+          )}
         </div>
         <div className="hero__scrim" />
       </div>
