@@ -19,7 +19,7 @@ export default {
   },
 
   brand: {
-    name: 'Glaze',
+    name: 'Woofles',
     tagline: 'Desserts & Coffee',
     city: 'Tbilisi, Georgia',
   },
@@ -44,7 +44,7 @@ export default {
   },
 
   home: {
-    documentTitle: 'Glaze — Desserts & Coffee in Tbilisi',
+    documentTitle: 'Woofles — Desserts & Coffee in Tbilisi',
     documentDescription:
       'Waffles, crêpes and specialty coffee in the heart of Tbilisi. Made fresh, served all day.',
 
@@ -57,10 +57,10 @@ export default {
     },
 
     intro: {
-      kicker: 'The Glaze Experience',
+      kicker: 'The Woofles Experience',
       heading: 'More Than a Coffee Stop',
       body: [
-        'We built Glaze to be a place where you can take your time. Whether it is a morning flat white on the way to work or a bubble waffle shared late in the afternoon, everything leaves our kitchen made to order.',
+        'We built Woofles to be a place where you can take your time. Whether it is a morning flat white on the way to work or a bubble waffle shared late in the afternoon, everything leaves our kitchen made to order.',
         'The room is small and warm, the counter is open, and the coffee is pulled in front of you. Nothing sits under a lamp waiting.',
       ],
       cta: 'Our Story',
@@ -102,35 +102,35 @@ export default {
       highlights: [
         'Belgian Waffle with strawberries and banana',
         'Bubble Waffle with ice cream and fruit',
-        'The Glaze Affogato',
+        'The Woofles Affogato',
       ],
       cta: 'See the Full Menu',
     },
 
     events: {
       kicker: 'Private Events',
-      heading: 'Bring Glaze to Your Event',
+      heading: 'Bring Woofles to Your Event',
       body: 'From a waffle bar at a wedding to a custom dessert and coffee menu for a private party — tell us the date and the headcount and we will put together a proposal.',
       cta: 'Inquire Now',
     },
   },
 
   about: {
-    documentTitle: 'About — Glaze Tbilisi',
+    documentTitle: 'About — Woofles Tbilisi',
     documentDescription:
-      'How Glaze came to be, and what goes into the waffles, desserts and coffee we serve in Tbilisi.',
+      'How Woofles came to be, and what goes into the waffles, desserts and coffee we serve in Tbilisi.',
 
     hero: {
       kicker: 'About Us',
       headline: 'A Small Room With a Long Counter',
-      lead: 'Glaze opened as a dessert bar with a serious coffee programme — and stayed that way.',
+      lead: 'Woofles opened as a dessert bar with a serious coffee programme — and stayed that way.',
     },
 
     story: {
       kicker: 'Our Story',
       heading: 'Built Around the Counter',
       body: [
-        '[PLACEHOLDER: Founding story — when Glaze opened, who started it, and what the idea was. Two or three paragraphs of real detail belong here; this text is standing in so the layout can be reviewed at the right length.]',
+        '[PLACEHOLDER: Founding story — when Woofles opened, who started it, and what the idea was. Two or three paragraphs of real detail belong here; this text is standing in so the layout can be reviewed at the right length.]',
         '[PLACEHOLDER: A second paragraph about the room itself, the neighbourhood, and how the menu came together.]',
       ],
     },
@@ -166,9 +166,9 @@ export default {
   },
 
   menu: {
-    documentTitle: 'Menu — Glaze Tbilisi',
+    documentTitle: 'Menu — Woofles Tbilisi',
     documentDescription:
-      'Waffles, crêpes, desserts, breakfast and specialty coffee at Glaze in Tbilisi.',
+      'Waffles, crêpes, desserts, breakfast and specialty coffee at Woofles in Tbilisi.',
 
     hero: {
       kicker: 'The Menu',
@@ -391,9 +391,9 @@ export default {
   },
 
   contact: {
-    documentTitle: 'Visit — Glaze Tbilisi',
+    documentTitle: 'Visit — Woofles Tbilisi',
     documentDescription:
-      'Address, opening hours and contact details for Glaze — Desserts & Coffee in Tbilisi.',
+      'Address, opening hours and contact details for Woofles — Desserts & Coffee in Tbilisi.',
 
     hero: {
       kicker: 'Visit Us',
@@ -405,7 +405,7 @@ export default {
       kicker: 'Find Us',
       heading: 'Address & Hours',
       addressLabel: 'Address',
-      // Read off the client's own opening announcement (images/Glaze_is_now_open.webp).
+      // Read off the client's own opening announcement (images/Woofles_is_now_open.webp).
       // Confirm it is still current before publishing.
       address: '9 Alexandr Pushkin St, Tbilisi, Georgia',
       hoursLabel: 'Opening hours',
@@ -415,7 +415,7 @@ export default {
       emailLabel: 'Email',
       email: '',
       mapCta: 'Open in Google Maps',
-      mapTitle: 'Map showing Glaze — Desserts & Coffee in Tbilisi',
+      mapTitle: 'Map showing Woofles — Desserts & Coffee in Tbilisi',
     },
 
     events: {
@@ -444,8 +444,8 @@ export default {
     kicker: 'The Feed',
     heading: 'A Look Around',
     lead: 'A few frames from the counter, the kitchen and the room.',
-    cta: 'Follow @glaze.tbilisi',
-    ctaHref: 'https://www.instagram.com/glaze.tbilisi/',
+    cta: 'Follow @woofles.tbilisi',
+    ctaHref: 'https://www.instagram.com/woofles.tbilisi/',
     prev: 'Previous images',
     next: 'More images',
     hint: 'Drag or swipe',
@@ -457,14 +457,14 @@ export default {
     visitHeading: 'Visit',
     followHeading: 'Follow',
     instagram: 'Instagram',
-    instagramHref: 'https://www.instagram.com/glaze.tbilisi/',
+    instagramHref: 'https://www.instagram.com/woofles.tbilisi/',
     googleMaps: 'Google Maps',
-    rights: (year) => `© ${year} Glaze. All rights reserved.`,
+    rights: (year) => `© ${year} Woofles. All rights reserved.`,
     credit: 'Demo site for client presentation.',
   },
 
   notFound: {
-    documentTitle: 'Page not found — Glaze',
+    documentTitle: 'Page not found — Woofles',
     heading: 'That page is not on the menu',
     body: 'The link may be out of date, or the page may have moved.',
     cta: 'Back to the start',

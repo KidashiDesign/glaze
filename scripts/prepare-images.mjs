@@ -50,7 +50,7 @@ function widthLadder(candidates, max) {
 // with the `hero*` keys in src/content/media.js.
 const TALL_ONLY = new Set([
   'main_chraracter',
-  'Taste_Glaze',
+  'Taste_Woofles',
   'Bubble_Waffle_and_strawberries',
   'inside_the_cafe',
 ])
@@ -72,7 +72,7 @@ const NO_WIDE = new Set(['cup', 'Mood', 'Create_your_own_waffle'])
  * They are also the source of several real facts about the business; see the
  * README's "What the photos told us" section.
  */
-const PROMO = new Set(['Glaze_is_now_open', 'Happy_Hours', 'lunch_combo'])
+const PROMO = new Set(['Woofles_is_now_open', 'Happy_Hours', 'lunch_combo'])
 
 const QUALITY = 76
 const SCORE_SCALE = 200 // downscale before scoring — cheap and less noise-sensitive
