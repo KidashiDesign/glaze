@@ -43,7 +43,7 @@ export const media = {
   introBackground: 'inside_the_cafe',
   introForeground: 'Desert',
 
-  craft: 'cravings',
+  craft: 'american-fluffy-pancake',
   craftDetail: 'couple-in-cafe', // "come visit us" invite — people at a table, not just product
 
   menuTeaser: 'Belgian_Waffle',
