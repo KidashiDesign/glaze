@@ -96,16 +96,6 @@
       "base": "/img/wide/Desert"
     }
   },
-  "Woofles_is_now_open": {
-    "promo": {
-      "sizes": [
-        480,
-        720
-      ],
-      "ratio": 0.8,
-      "base": "/img/promo/Woofles_is_now_open"
-    }
-  },
   "Happy_Hours": {
     "promo": {
       "sizes": [
@@ -201,6 +191,16 @@
       ],
       "ratio": 1.7778,
       "base": "/img/wide/Waffle_Man"
+    }
+  },
+  "Woofles_is_now_open": {
+    "promo": {
+      "sizes": [
+        480,
+        720
+      ],
+      "ratio": 0.8,
+      "base": "/img/promo/Woofles_is_now_open"
     }
   },
   "bubble_waffle_with_ice_cream__fruit": {
