@@ -38,7 +38,7 @@ export const media = {
   heroHome: 'main_chraracter', // marble bust holding a branded cup
   heroAbout: 'Taste_Woofles', // a plate carried to a table — people, not just product
   heroMenu: 'Bubble_Waffle_and_strawberries',
-  heroContact: 'inside_the_cafe', // the room itself, for "come and sit for a while"
+  heroContact: 'bubblewaffle-vanilla-icecream-topping',
 
   introBackground: 'inside_the_cafe',
   introForeground: 'Desert',
