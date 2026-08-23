@@ -53,6 +53,7 @@ const TALL_ONLY = new Set([
   'Taste_Woofles',
   'Bubble_Waffle_and_strawberries',
   'inside_the_cafe',
+  'bubblewaffle-vanilla-icecream-topping',
 ])
 
 /**

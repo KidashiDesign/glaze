@@ -402,6 +402,14 @@
       ],
       "ratio": 1.7778,
       "base": "/img/wide/bubblewaffle-vanilla-icecream-topping"
+    },
+    "tall": {
+      "sizes": [
+        480,
+        761
+      ],
+      "ratio": 0.8,
+      "base": "/img/tall/bubblewaffle-vanilla-icecream-topping"
     }
   },
   "cafe": {
