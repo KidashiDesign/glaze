@@ -23,7 +23,7 @@ export default function About() {
         headline={about.hero.headline}
         lead={about.hero.lead}
         image={media.heroAbout}
-        imageAlt="[PLACEHOLDER: Hero image description]"
+        imageAlt="A freshly plated dessert being carried to a table at Woofles"
         size="compact"
       />
 
@@ -43,7 +43,7 @@ export default function About() {
             back={
               <Picture
                 name={media.aboutTwinBack}
-                alt="[PLACEHOLDER: Image description]"
+                alt="A toasted sandwich from the Woofles menu"
                 sizes="(min-width: 860px) 42vw, 86vw"
                 plate
               />
@@ -51,7 +51,7 @@ export default function About() {
             front={
               <Picture
                 name={media.aboutTwinFront}
-                alt="[PLACEHOLDER: Image description]"
+                alt="A freshly made crêpe"
                 sizes="(min-width: 860px) 30vw, 62vw"
                 plate
               />
@@ -70,7 +70,7 @@ export default function About() {
       >
         <Picture
           name={media.aboutWide}
-          alt="[PLACEHOLDER: Image description]"
+          alt="A bubble waffle with toppings"
           sizes="100vw"
           className="bleed__picture"
         />
@@ -91,7 +91,7 @@ export default function About() {
             body={about.visit.body}
             cta={{ to: '/contact', label: about.visit.cta }}
             image={media.craftDetail}
-            imageAlt="[PLACEHOLDER: Image description]"
+            imageAlt="Guests sitting together at a table in the café"
             flip
           />
         </div>

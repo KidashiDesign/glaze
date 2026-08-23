@@ -24,7 +24,7 @@ export default function Home() {
         headline={home.hero.headline}
         lead={home.hero.lead}
         image={media.heroHome}
-        imageAlt="[PLACEHOLDER: Hero image description]"
+        imageAlt="A marble bust sculpture holding a Woofles-branded takeaway cup"
         video="/video/hero-waffle.mp4"
         primaryCta={{ to: '/menu', label: home.hero.cta }}
         secondaryCta={{ to: '/contact', label: home.hero.ctaSecondary }}
@@ -40,7 +40,7 @@ export default function Home() {
             body={home.craft.body}
             cta={{ to: '/menu', label: home.craft.cta }}
             image={media.craft}
-            imageAlt="[PLACEHOLDER: Image description]"
+            imageAlt="Waffle and ice cream dessert styled for the camera"
           />
         </div>
       </section>
@@ -58,7 +58,7 @@ export default function Home() {
             back={
               <Picture
                 name={media.introBackground}
-                alt="[PLACEHOLDER: Image description]"
+                alt="Interior view of the Woofles café seating area"
                 sizes="(min-width: 860px) 42vw, 86vw"
                 plate
               />
@@ -66,7 +66,7 @@ export default function Home() {
             front={
               <Picture
                 name={media.introForeground}
-                alt="[PLACEHOLDER: Image description]"
+                alt="Fruit waffle plated as a dessert"
                 sizes="(min-width: 860px) 30vw, 62vw"
                 plate
               />
@@ -98,7 +98,7 @@ export default function Home() {
             bullets={home.menuTeaser.highlights}
             cta={{ to: '/menu', label: home.menuTeaser.cta }}
             image={media.menuTeaser}
-            imageAlt="[PLACEHOLDER: Image description]"
+            imageAlt="Belgian waffle, one of the dishes on the menu"
             flip
           />
         </div>
@@ -112,7 +112,7 @@ export default function Home() {
             body={home.events.body}
             cta={{ to: '/contact', label: home.events.cta }}
             image={media.events}
-            imageAlt="[PLACEHOLDER: Image description]"
+            imageAlt="A person holding an oversized ice cream cone, styled for a catering or events setting"
             tone="ink"
           />
         </div>
