@@ -444,8 +444,6 @@ export default {
     kicker: 'The Feed',
     heading: 'A Look Around',
     lead: 'A few frames from the counter, the kitchen and the room.',
-    cta: 'Follow @woofles.tbilisi',
-    ctaHref: 'https://www.instagram.com/woofles.tbilisi/',
     prev: 'Previous images',
     next: 'More images',
     hint: 'Drag or swipe',
