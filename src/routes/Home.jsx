@@ -25,6 +25,7 @@ export default function Home() {
         lead={home.hero.lead}
         image={media.heroHome}
         imageAlt="[PLACEHOLDER: Hero image description]"
+        video="/video/hero-waffle.mp4"
         primaryCta={{ to: '/menu', label: home.hero.cta }}
         secondaryCta={{ to: '/contact', label: home.hero.ctaSecondary }}
       />
