@@ -440,8 +440,6 @@ export default {
     kicker: 'Лента',
     heading: 'Загляните к нам',
     lead: 'Несколько кадров со стойки, кухни и зала.',
-    cta: 'Подписаться @woofles.tbilisi',
-    ctaHref: 'https://www.instagram.com/woofles.tbilisi/',
     prev: 'Предыдущие фото',
     next: 'Ещё фото',
     hint: 'Проведите пальцем или перетащите',

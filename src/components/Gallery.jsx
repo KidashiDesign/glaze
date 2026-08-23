@@ -266,14 +266,6 @@ export default function Gallery() {
         <span className="gallery__hint text-muted" aria-hidden="true">
           {t.gallery.hint}
         </span>
-        <a
-          className="btn btn-primary btn-lg"
-          href={t.gallery.ctaHref}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {t.gallery.cta}
-        </a>
       </div>
     </section>
   )

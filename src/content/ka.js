@@ -442,8 +442,6 @@ export default {
     kicker: 'ფოტოები',
     heading: 'მოავლეთ თვალი',
     lead: 'რამდენიმე კადრი ბარიდან, სამზარეულოდან და დარბაზიდან.',
-    cta: 'გამოგვყევით @woofles.tbilisi',
-    ctaHref: 'https://www.instagram.com/woofles.tbilisi/',
     prev: 'წინა ფოტოები',
     next: 'შემდეგი ფოტოები',
     hint: 'გადაათრიეთ ან გადაფურცლეთ',
