@@ -44,7 +44,7 @@ export const media = {
   introForeground: 'Desert',
 
   craft: 'cravings',
-  craftDetail: 'Coffee',
+  craftDetail: 'couple-in-cafe', // "come visit us" invite — people at a table, not just product
 
   menuTeaser: 'Belgian_Waffle',
   events: 'Waffle_Man', // someone holding an oversized cone — reads as catering
@@ -68,6 +68,10 @@ export const promo = {
 
 // The gallery — landscape crops only, ordered so close-ups and wider shots
 // alternate and the strip has rhythm as it scrolls.
+//
+// The second block is a later batch of originals, already landscape and at
+// higher source resolution (up to 1600px) than the first 23 — see the
+// resolution caveat in README. Same alternating rhythm.
 export const galleryImages = [
   'Taste_Woofles',
   'inside_the_cafe',
@@ -81,4 +85,35 @@ export const galleryImages = [
   'Breakfast',
   'Some_sweet',
   'cravings',
+
+  'bubblewaffle-icecream-snickers',
+  'cafe',
+  'walnut-bubblewaffle',
+  'couple-in-cafe',
+  'scream-bubble-waffle-ics',
+  'special-dog-waffle',
+  'blueberry-waffle',
+  'coffe-mashine',
+  'kiwi-banana-crep',
+  'street-woman-bubble-icecream',
+  'chokolade-banana',
+  'waffle-cafe',
+  'banana-split-2',
+  'woman-coworking-cafe',
+  'bubblewaffle-vanilla-icecream-topping',
+  'american-fluffy-pancake',
+  'strwaberry-shake-deluxe',
+  'street-woman-bubble-icecream-two',
+  'tuttifrutti-crap-coco',
+  'marshmallow-shake',
+  'waffle-coclate-sauce',
+  'gummibear-icecup-premium',
+  'rainbow-suprice-sup',
+  'brezel-cacao-shake',
+  'teracotta-strawberry-shake',
+  'bubblewaffle-ice-two',
+  'm-and-m-icecoffee',
+  'pancake-strawberry',
+  'banana-split',
+  '3-portions-icecream',
 ]

@@ -245,7 +245,7 @@ export default function Gallery() {
             <figure className="gallery__figure">
               <Picture
                 name={name}
-                alt={name.replace(/_/g, ' ')}
+                alt={name.replace(/[_-]+/g, ' ')}
                 sizes="(min-width: 1100px) 32vw, (min-width: 700px) 46vw, 82vw"
                 className="gallery__picture"
                 plate
