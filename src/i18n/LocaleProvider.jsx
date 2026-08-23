@@ -1,7 +1,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import { locales, localeCodes, defaultLocale } from '../content'
 
-const STORAGE_KEY = 'glaze.locale'
+const STORAGE_KEY = 'woofles.locale'
 const LocaleContext = createContext(null)
 
 /** Stored choice first, then the browser's preference, then English. */

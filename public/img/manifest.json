@@ -96,14 +96,14 @@
       "base": "/img/wide/Desert"
     }
   },
-  "Glaze_is_now_open": {
+  "Woofles_is_now_open": {
     "promo": {
       "sizes": [
         480,
         720
       ],
       "ratio": 0.8,
-      "base": "/img/promo/Glaze_is_now_open"
+      "base": "/img/promo/Woofles_is_now_open"
     }
   },
   "Happy_Hours": {
@@ -172,7 +172,7 @@
       "base": "/img/wide/Take_Away"
     }
   },
-  "Taste_Glaze": {
+  "Taste_Woofles": {
     "wide": {
       "sizes": [
         480,
@@ -180,7 +180,7 @@
         901
       ],
       "ratio": 1.7778,
-      "base": "/img/wide/Taste_Glaze"
+      "base": "/img/wide/Taste_Woofles"
     },
     "tall": {
       "sizes": [
@@ -189,7 +189,7 @@
         901
       ],
       "ratio": 0.8,
-      "base": "/img/tall/Taste_Glaze"
+      "base": "/img/tall/Taste_Woofles"
     }
   },
   "Waffle_Man": {

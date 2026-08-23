@@ -36,7 +36,7 @@ export function imageSource(name, variant = 'wide') {
 // — see `promo` below.
 export const media = {
   heroHome: 'main_chraracter', // marble bust holding a branded cup
-  heroAbout: 'Taste_Glaze', // a plate carried to a table — people, not just product
+  heroAbout: 'Taste_Woofles', // a plate carried to a table — people, not just product
   heroMenu: 'Bubble_Waffle_and_strawberries',
   heroContact: 'inside_the_cafe', // the room itself, for "come and sit for a while"
 
@@ -61,7 +61,7 @@ export const media = {
  * are safe to crop.
  */
 export const promo = {
-  nowOpen: 'Glaze_is_now_open',
+  nowOpen: 'Woofles_is_now_open',
   happyHours: 'Happy_Hours',
   lunchCombo: 'lunch_combo',
 }
@@ -69,7 +69,7 @@ export const promo = {
 // The gallery — landscape crops only, ordered so close-ups and wider shots
 // alternate and the strip has rhythm as it scrolls.
 export const galleryImages = [
-  'Taste_Glaze',
+  'Taste_Woofles',
   'inside_the_cafe',
   'Bubble_Waffle',
   'Coffee',

@@ -1,6 +1,6 @@
-# Glaze — Demo Website
+# Woofles — Demo Website
 
-A trilingual (English / Georgian / Russian), responsive demo site for **Glaze —
+A trilingual (English / Georgian / Russian), responsive demo site for **Woofles —
 Desserts & Coffee** in Tbilisi. React + Vite, GSAP/ScrollTrigger, no framework
 beyond that.
 
@@ -71,11 +71,11 @@ Several facts were read off the client's own promo images rather than supplied.
 
 | Fact | Source file |
 | --- | --- |
-| Address: 9 Alexandr Pushkin St, Tbilisi | `Glaze_is_now_open.webp` |
-| Instagram: `@glaze.tbilisi` | `Happy_Hours.webp` |
+| Address: 9 Alexandr Pushkin St, Tbilisi | `Woofles_is_now_open.webp` |
+| Instagram: `@woofles.tbilisi` | `Happy_Hours.webp` |
 | Happy Hours: 09:30–14:00 daily, 15% off | `Happy_Hours.webp` |
 | Lunch Combo: 30 ₾ (any sandwich + dessert + espresso/americano) | `lunch_combo.webp` |
-| Brand mark: "GLAZE — DESSERTS & COFFEE", gold on dark green | `main_chraracter.webp` |
+| Brand mark: "WOOFLES — DESSERTS & COFFEE", gold on dark green | `main_chraracter.webp` |
 
 Those three promo files carry typeset copy in the pixels, so the pipeline emits
 them uncropped and no page uses them as a croppable photograph.

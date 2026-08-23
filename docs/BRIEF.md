@@ -1,4 +1,4 @@
-# Glaze — Demo Website Brief (v2)
+# Woofles — Demo Website Brief (v2)
 
 This replaces the original prompt. Every contradiction in that version has been
 resolved against a decision, and every requirement that turned out to be
@@ -10,7 +10,7 @@ settled question.
 
 ## 1. What is being built
 
-A responsive, multi-page demo website for **Glaze — Desserts & Coffee**, a cafe
+A responsive, multi-page demo website for **Woofles — Desserts & Coffee**, a cafe
 at 9 Alexandr Pushkin St, Tbilisi, Georgia.
 
 Purpose: a client presentation. The structure and code must be clean and
@@ -75,7 +75,7 @@ which on food photography lands on the dish rather than on an empty wall.
 
 Three rules the pipeline encodes:
 
-1. **Promo graphics are never cropped.** `Glaze_is_now_open`, `Happy_Hours` and
+1. **Promo graphics are never cropped.** `Woofles_is_now_open`, `Happy_Hours` and
    `lunch_combo` have typeset copy baked into the pixels. Cropping cuts words in
    half.
 2. **Portrait-only subjects are excluded from the landscape set.** `cup` crops
@@ -101,9 +101,9 @@ Every price is a placeholder **except the Lunch Combo (30 ₾)**, which is print
 in the client's own promo image.
 
 > Supersedes the original brief's gelato menu (Pistachio & Sea Salt, Georgian
-> Honey & Walnut, Tbilisi Sour Cherry Sorbet). Glaze is a dessert-and-coffee
+> Honey & Walnut, Tbilisi Sour Cherry Sorbet). Woofles is a dessert-and-coffee
 > shop, not a gelateria — ice cream appears as a topping on waffles. Its own
-> Google listing reads "Glaze • Desserts & Coffee".
+> Google listing reads "Woofles • Desserts & Coffee".
 
 ## 6. Reviews — [DECIDED] cached, not live
 
