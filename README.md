@@ -97,8 +97,6 @@ rendered page. Search `src/content/en.js` and `ka.js`.
 - Phone number
 - Email address
 - Enquiry destination for the private-events CTA (email, form or WhatsApp)
-- Alt text for every photograph, and the gallery captions
-- Hero eyebrow / image descriptions
 
 **Menu** — every dish name is an example drawn from the client's photography,
 and every price is a placeholder **except the Lunch Combo (30 ₾)**. Replace the

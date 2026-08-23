@@ -28,7 +28,7 @@ export default function Contact() {
         headline={t.contact.hero.headline}
         lead={t.contact.hero.lead}
         image={media.heroContact}
-        imageAlt="[PLACEHOLDER: Hero image description]"
+        imageAlt="Interior view of the Woofles café seating area"
         size="compact"
       />
 
@@ -69,7 +69,7 @@ export default function Contact() {
             heading={t.contact.events.heading}
             body={t.contact.events.body}
             image={media.events}
-            imageAlt="[PLACEHOLDER: Image description]"
+            imageAlt="A person holding an oversized ice cream cone, styled for a catering or events setting"
             tone="ink"
             flip
           />

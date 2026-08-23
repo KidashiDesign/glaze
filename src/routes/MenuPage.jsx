@@ -17,7 +17,7 @@ export default function MenuPage() {
         headline={t.menu.hero.headline}
         lead={t.menu.hero.lead}
         image={media.heroMenu}
-        imageAlt="[PLACEHOLDER: Hero image description]"
+        imageAlt="Bubble waffle topped with strawberries"
         size="compact"
       />
 
