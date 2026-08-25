@@ -2,6 +2,17 @@
  * Run `npm run fonts` to refresh. Faces are self-hosted from /public/fonts
  * so no third-party request sits on the critical rendering path.
  */
+
+/* Hand-added (not part of the fetch-fonts.mjs pipeline — this face has no
+ * Google Fonts source): the script cut used for the brand wordmark. */
+@font-face {
+  font-family: 'Loredana Script';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/loredana-script.woff2') format('woff2');
+}
+
 @font-face {
   font-family: 'Cormorant Garamond';
   font-style: italic;
