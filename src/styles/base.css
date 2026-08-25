@@ -31,6 +31,12 @@ body {
    that breaks the editorial pairing. The Latin families stay first in the
    stack so mixed strings (prices, "Wi-Fi", @handles) keep their shapes. */
 :root {
+  /* Site-wide heading font: overrides Classical's --font-heading token (see
+     classical.css's own override note above `@import`) so every heading —
+     h1-h6, .display/.h1/.h2/.h3, .kicker, card/section titles — sets in the
+     brand's script face instead of Cormorant Garamond. Cormorant Garamond
+     stays as the fallback for weights/glyphs Loredana Script doesn't cover. */
+  --font-heading: 'Loredana Script', "Cormorant Garamond", system-ui, sans-serif;
   --font-heading-ka: var(--font-heading), 'Noto Serif Georgian', Georgia, serif;
   --font-body-ka: var(--font-body), 'Noto Serif Georgian', Georgia, serif;
   --plate-grade: sepia(0.22) saturate(0.82) contrast(1.05);
