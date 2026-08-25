@@ -140,14 +140,14 @@
   flex-direction: column;
 }
 
-/* Wordmark: the bold Georgian cut, same in every locale — the logo isn't
+/* Wordmark: the Loredana Script cut, same in every locale — the logo isn't
    translated copy, so it doesn't follow :lang(ka)'s heading-font swap. */
 .nav-bar__brand-name {
-  font-family: 'Noto Serif Georgian', var(--font-heading);
-  font-weight: 600;
-  font-size: 1.35rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  font-family: 'Loredana Script', 'Noto Serif Georgian', var(--font-heading);
+  font-weight: 400;
+  font-size: 1.75rem;
+  letter-spacing: 0.01em;
+  text-transform: none;
 }
 
 .nav-bar__brand-tagline {
