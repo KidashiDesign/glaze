@@ -2,7 +2,13 @@
    sections. Component classes from classical.css (.btn, .card, .plate, .hr,
    .tag, .table) are used as-is; anything added here is either a layout
    primitive the system does not ship, or a documented extension of one. */
-
+@font-face {
+  font-family: 'Manosque';
+  src: url('/fonts/Manosque-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
@@ -118,7 +124,7 @@ video {
 .h1,
 .h2,
 .h3 {
-  font-family: var(--font-heading);
+  font-family: 'Manosque', serif;
   line-height: 1.06;
   letter-spacing: -0.02em;
   margin: 0;
