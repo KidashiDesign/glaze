@@ -96,7 +96,7 @@ export default function Nav() {
           <NavLink to="/" className="nav-bar__brand" aria-label={t.brand.name}>
             <img
               className="nav-bar__brand-logo"
-              src="/img/woofles-logo.png"
+              src="/img/Waffle-Logo-Vector.svg"
               alt=""
               width="40"
               height="40"
