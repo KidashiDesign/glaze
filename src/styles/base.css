@@ -32,27 +32,8 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Georgian is set in Noto Serif Georgian — neither Cormorant Garamond nor Lora
-   covers the script, and without this the browser falls back to a system face
-   that breaks the editorial pairing. The Latin families stay first in the
-   stack so mixed strings (prices, "Wi-Fi", @handles) keep their shapes. */
 :root {
-  --font-heading-ka: var(--font-heading), 'Noto Serif Georgian', Georgia, serif;
-  --font-body-ka: var(--font-body), 'Noto Serif Georgian', Georgia, serif;
   --plate-grade: sepia(0.22) saturate(0.82) contrast(1.05);
-}
-
-:lang(ka) {
-  --font-heading: var(--font-heading-ka);
-  --font-body: var(--font-body-ka);
-}
-
-/* Georgian has no capitals; uppercasing renders unchanged but widens tracking
-   awkwardly, so kickers keep their natural case in that locale. */
-:lang(ka) .kicker,
-:lang(ka) h6 {
-  text-transform: none;
-  letter-spacing: 0.04em;
 }
 
 img,
@@ -199,12 +180,6 @@ video {
   .prose p {
     text-align: justify;
     hyphens: auto;
-  }
-  /* Georgian hyphenation patterns are not shipped by browsers; justifying
-     without them opens large word gaps, so Georgian prose stays ragged. */
-  :lang(ka) .prose p {
-    text-align: left;
-    hyphens: manual;
   }
 }
 

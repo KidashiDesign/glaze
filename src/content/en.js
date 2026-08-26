@@ -2,7 +2,7 @@
 // ENGLISH COPY — every string the site renders.
 //
 // Edit this file to change wording. No component, layout or GSAP file needs to
-// be touched. src/content/ka.js mirrors this shape exactly; if you add a key
+// be touched. src/content/de.js mirrors this shape exactly; if you add a key
 // here, add it there too (a dev-time check in src/content/index.js will warn
 // when the two drift apart).
 //

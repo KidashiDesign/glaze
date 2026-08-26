@@ -1,6 +1,6 @@
 # Woofles — Demo Website
 
-A trilingual (English / Georgian / Russian), responsive demo site for **Woofles —
+A bilingual (English / German), responsive demo site for **Woofles —
 Desserts & Coffee** in Tbilisi. React + Vite, GSAP/ScrollTrigger, no framework
 beyond that.
 
@@ -31,7 +31,7 @@ scripts/
   fetch-fonts.mjs           Font pipeline
 src/
   content/                  ALL copy and image mapping — edit only this
-    en.js  ka.js  ru.js     Copy per locale, identical shapes
+    en.js  de.js            Copy per locale, identical shapes
     media.js                Which photo goes where
     reviews.js              Cached Google reviews
   styles/
@@ -88,7 +88,7 @@ waffle, `Mood` is a hamster on a diving board at sea. Assignments in
 ## Remaining placeholders
 
 Everything below appears as `[PLACEHOLDER: ...]` in the source and in the
-rendered page. Search `src/content/en.js` and `ka.js`.
+rendered page. Search `src/content/en.js` and `de.js`.
 
 **Content**
 
@@ -112,10 +112,9 @@ as any other real customer data. Below four reviews the wall falls back to a
 static centered stack instead of the two-column scroll, so a short list
 still looks intentional if entries are ever pruned.
 
-**Georgian and Russian copy** — ⚠ both need a native-speaker pass. The
-translations are careful, but marketing tone needs a native ear, and the menu
-names should be checked against what the counter actually calls them in each
-language.
+**German copy** — ⚠ needs a native-speaker pass. The translation is careful,
+but marketing tone needs a native ear, and the menu names should be checked
+against what the counter actually calls them in German.
 
 ## Accessibility
 

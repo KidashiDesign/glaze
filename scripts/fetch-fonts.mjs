@@ -8,13 +8,10 @@
  * is render-blocking on a cold cache and puts a third-party request on the
  * critical path, which fights the "loads quickly" requirement — so the faces
  * are self-hosted instead. Only the subsets the site can actually display are
- * fetched: latin and latin-ext for the English copy, georgian for the Georgian.
+ * fetched: latin and latin-ext, which cover both the English and German copy.
  *
  * Output is committed, so a fresh clone runs without network access.
  */
-// Subsets: latin/latin-ext for English, cyrillic/cyrillic-ext for Russian
-// (both Cormorant Garamond and Lora cover Cyrillic natively), georgian for
-// Georgian via the separate Noto Serif Georgian face below.
 import { mkdir, writeFile, rm } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -32,17 +29,16 @@ const FAMILIES = [
   {
     name: 'Cormorant Garamond',
     query: 'Cormorant+Garamond:ital,wght@0,400;0,600;1,400',
-    subsets: ['latin', 'latin-ext', 'cyrillic', 'cyrillic-ext'],
+    subsets: ['latin', 'latin-ext'],
   },
   {
     name: 'Lora',
     query: 'Lora:ital,wght@0,400;0,600;1,400',
-    subsets: ['latin', 'latin-ext', 'cyrillic', 'cyrillic-ext'],
+    subsets: ['latin', 'latin-ext'],
   },
-  { name: 'Noto Serif Georgian', query: 'Noto+Serif+Georgian:wght@400;600', subsets: ['georgian'] },
   // Latin-only, bold weight: the wordmark borrows this cut for the logo in
   // every locale (see .nav-bar__brand-name), so "Woofles" needs Latin glyphs
-  // from the same family even though body/heading copy never does.
+  // from this family even though body/heading copy never does.
   { name: 'Noto Serif Georgian', query: 'Noto+Serif+Georgian:wght@600', subsets: ['latin'] },
 ]
 

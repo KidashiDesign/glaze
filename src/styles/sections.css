@@ -141,7 +141,7 @@
 }
 
 /* Wordmark: the Loredana Script cut, same in every locale — the logo isn't
-   translated copy, so it doesn't follow :lang(ka)'s heading-font swap. */
+   translated copy. */
 .nav-bar__brand-name {
   font-family: 'Loredana Script', 'Noto Serif Georgian', var(--font-heading);
   font-weight: 400;

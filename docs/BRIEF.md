@@ -18,8 +18,8 @@ modular, and content must be swappable without touching layout or animation
 code. Anything not supplied by the client is marked `[PLACEHOLDER: ...]` in both
 the source and the rendered UI.
 
-**Audience:** international and Georgian. The site ships **bilingual, English
-and Georgian**, switchable in the nav and remembered across visits.
+**Audience:** international and German-speaking. The site ships **bilingual,
+English and German**, switchable in the nav and remembered across visits.
 
 ## 2. Scope — [DECIDED] full multi-page site
 
@@ -58,9 +58,6 @@ Two additive layers sit on top and never redefine a system token:
 `tokens.ext.css` (section rhythm, fluid display scale, layout) and `base.css`.
 Classical is sized for interface work — its spacing scale stops at 36.8px and
 `h1` is a fixed 42px — so a marketing page needs the extension.
-
-**Georgian type:** Cormorant Garamond and Lora do not cover the Georgian script.
-Noto Serif Georgian is loaded and applied via `:lang(ka)`.
 
 ## 4. Imagery — [DECIDED] crop the originals to landscape
 
@@ -168,4 +165,4 @@ numbers change: shorter scrub distances, drift halved, scale capped.
 
 See the README's placeholder list. The substantive ones: full opening hours,
 phone, email, the founding story, an enquiry destination for the events CTA,
-real prices, real reviews, and a native-speaker pass over the Georgian copy.
+real prices, real reviews, and a native-speaker pass over the German copy.
