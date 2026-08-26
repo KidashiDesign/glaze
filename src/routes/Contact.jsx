@@ -35,7 +35,7 @@ export default function Contact() {
 
       <section className="section contact">
         <div className="container container-narrow">
-          <img className="contact__logo" src="/img/woofles-logo.png" alt="" width="72" height="72" />
+          <img className="contact__logo" src="/img/Waffle-Logo-Vector.svg" alt="" width="72" height="72" />
           <SectionHeading kicker={details.kicker} heading={details.heading} />
 
           <dl ref={ref} className="contact__details">
