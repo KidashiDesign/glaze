@@ -1,9 +1,8 @@
 import en from './en'
-import ka from './ka'
-import ru from './ru'
+import de from './de'
 
-export const locales = { en, ka, ru }
-export const localeCodes = /** @type {const} */ (['en', 'ka', 'ru'])
+export const locales = { en, de }
+export const localeCodes = /** @type {const} */ (['en', 'de'])
 export const defaultLocale = 'en'
 
 /**

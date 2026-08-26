@@ -48,9 +48,9 @@ function useLoopingFade(fadeSeconds = 0.6) {
  *
  * The headline is split into words so they can stagger — each word sits in its
  * own inline-block wrapper with an overflow mask, so the words rise out of the
- * line rather than fading in place. Splitting on whitespace keeps Georgian
- * intact: the script is unicase and space-separated, so word boundaries behave
- * the same as in Latin text.
+ * line rather than fading in place. Splitting on whitespace works the same
+ * way across every locale copy uses today, since all of them are
+ * space-separated.
  */
 export default function Hero({
   kicker,
