@@ -5,10 +5,9 @@ import NumberedList from '../components/NumberedList'
 import FeatureBlock from '../components/FeatureBlock'
 import Reviews from '../components/Reviews'
 import Gallery from '../components/Gallery'
-import PhotoMosaic from '../components/PhotoMosaic'
 import ParallaxDrift from '../animation/ParallaxDrift'
 import Picture from '../components/Picture'
-import { media, mosaicHome } from '../content/media'
+import { media } from '../content/media'
 import { useLocale } from '../i18n/LocaleProvider'
 import { usePageMeta } from '../hooks/usePageMeta'
 
@@ -49,12 +48,6 @@ export default function Home() {
         <div className="container">
           <SectionHeading kicker={home.usps.kicker} heading={home.usps.heading} />
           <NumberedList items={home.usps.items} />
-        </div>
-      </section>
-
-      <section className="section section-tight">
-        <div className="container">
-          <PhotoMosaic images={mosaicHome} />
         </div>
       </section>
 
