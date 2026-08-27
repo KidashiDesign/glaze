@@ -4,7 +4,8 @@
       "sizes": [
         480,
         720,
-        1080
+        1080,
+        1600
       ],
       "ratio": 1.7778,
       "base": "/img/wide/Belgian_Waffle"
@@ -15,7 +16,8 @@
       "sizes": [
         480,
         720,
-        901
+        1080,
+        1600
       ],
       "ratio": 1.7778,
       "base": "/img/wide/Breakfast"
@@ -26,41 +28,23 @@
       "sizes": [
         480,
         720,
-        1080
+        1080,
+        1600
       ],
       "ratio": 1.7778,
       "base": "/img/wide/Bubble_Waffle"
     }
   },
-  "Bubble_Waffle_and_strawberries": {
+  "Cinnemon_Roll": {
     "wide": {
       "sizes": [
         480,
         720,
-        1080
+        1080,
+        1280
       ],
       "ratio": 1.7778,
-      "base": "/img/wide/Bubble_Waffle_and_strawberries"
-    },
-    "tall": {
-      "sizes": [
-        480,
-        720,
-        1080
-      ],
-      "ratio": 0.8,
-      "base": "/img/tall/Bubble_Waffle_and_strawberries"
-    }
-  },
-  "Cinnamon_Roll": {
-    "wide": {
-      "sizes": [
-        480,
-        720,
-        900
-      ],
-      "ratio": 1.7778,
-      "base": "/img/wide/Cinnamon_Roll"
+      "base": "/img/wide/Cinnemon_Roll"
     }
   },
   "Coffee": {
@@ -68,21 +52,11 @@
       "sizes": [
         480,
         720,
-        1080
+        1080,
+        1600
       ],
       "ratio": 1.7778,
       "base": "/img/wide/Coffee"
-    }
-  },
-  "Create_your_own_waffle": {
-    "tall": {
-      "sizes": [
-        480,
-        720,
-        901
-      ],
-      "ratio": 0.8,
-      "base": "/img/tall/Create_your_own_waffle"
     }
   },
   "Desert": {
@@ -90,21 +64,11 @@
       "sizes": [
         480,
         720,
-        900
+        1080,
+        1280
       ],
       "ratio": 1.7778,
       "base": "/img/wide/Desert"
-    }
-  },
-  "Happy_Hours": {
-    "promo": {
-      "sizes": [
-        480,
-        720,
-        900
-      ],
-      "ratio": 0.5625,
-      "base": "/img/promo/Happy_Hours"
     }
   },
   "Milk_Shake": {
@@ -112,43 +76,11 @@
       "sizes": [
         480,
         720,
-        1000
+        1080,
+        1280
       ],
       "ratio": 1.7778,
       "base": "/img/wide/Milk_Shake"
-    }
-  },
-  "Mood": {
-    "tall": {
-      "sizes": [
-        480,
-        720,
-        1226
-      ],
-      "ratio": 0.8,
-      "base": "/img/tall/Mood"
-    }
-  },
-  "Sandwich": {
-    "wide": {
-      "sizes": [
-        480,
-        720,
-        901
-      ],
-      "ratio": 1.7778,
-      "base": "/img/wide/Sandwich"
-    }
-  },
-  "Some_sweet": {
-    "wide": {
-      "sizes": [
-        480,
-        720,
-        899
-      ],
-      "ratio": 1.7778,
-      "base": "/img/wide/Some_sweet"
     }
   },
   "Take_Away": {
@@ -156,7 +88,8 @@
       "sizes": [
         480,
         720,
-        899
+        1080,
+        1600
       ],
       "ratio": 1.7778,
       "base": "/img/wide/Take_Away"
@@ -167,7 +100,8 @@
       "sizes": [
         480,
         720,
-        901
+        1080,
+        1600
       ],
       "ratio": 1.7778,
       "base": "/img/wide/Taste_Woofles"
@@ -176,7 +110,8 @@
       "sizes": [
         480,
         720,
-        901
+        1080,
+        1280
       ],
       "ratio": 0.8,
       "base": "/img/tall/Taste_Woofles"
@@ -187,126 +122,11 @@
       "sizes": [
         480,
         720,
-        1200
-      ],
-      "ratio": 1.7778,
-      "base": "/img/wide/Waffle_Man"
-    }
-  },
-  "Woofles_is_now_open": {
-    "promo": {
-      "sizes": [
-        480,
-        720
-      ],
-      "ratio": 0.8,
-      "base": "/img/promo/Woofles_is_now_open"
-    }
-  },
-  "bubble_waffle_with_ice_cream__fruit": {
-    "wide": {
-      "sizes": [
-        480,
-        816
-      ],
-      "ratio": 1.7778,
-      "base": "/img/wide/bubble_waffle_with_ice_cream__fruit"
-    }
-  },
-  "cravings": {
-    "wide": {
-      "sizes": [
-        480,
-        720,
-        900
-      ],
-      "ratio": 1.7778,
-      "base": "/img/wide/cravings"
-    }
-  },
-  "crepe": {
-    "wide": {
-      "sizes": [
-        480,
-        720,
-        1080
-      ],
-      "ratio": 1.7778,
-      "base": "/img/wide/crepe"
-    }
-  },
-  "cup": {
-    "tall": {
-      "sizes": [
-        480,
-        720,
-        900
-      ],
-      "ratio": 0.8,
-      "base": "/img/tall/cup"
-    }
-  },
-  "inside_the_cafe": {
-    "wide": {
-      "sizes": [
-        480,
-        720,
-        900
-      ],
-      "ratio": 1.7778,
-      "base": "/img/wide/inside_the_cafe"
-    },
-    "tall": {
-      "sizes": [
-        480,
-        720,
-        900
-      ],
-      "ratio": 0.8,
-      "base": "/img/tall/inside_the_cafe"
-    }
-  },
-  "lunch_combo": {
-    "promo": {
-      "sizes": [
-        480,
-        720,
-        1080
-      ],
-      "ratio": 0.7994,
-      "base": "/img/promo/lunch_combo"
-    }
-  },
-  "main_chraracter": {
-    "wide": {
-      "sizes": [
-        480,
-        720,
-        1080
-      ],
-      "ratio": 1.7778,
-      "base": "/img/wide/main_chraracter"
-    },
-    "tall": {
-      "sizes": [
-        480,
-        720,
-        864
-      ],
-      "ratio": 0.8,
-      "base": "/img/tall/main_chraracter"
-    }
-  },
-  "3-portions-icecream": {
-    "wide": {
-      "sizes": [
-        480,
-        720,
         1080,
         1600
       ],
       "ratio": 1.7778,
-      "base": "/img/wide/3-portions-icecream"
+      "base": "/img/wide/Waffle_Man"
     }
   },
   "american-fluffy-pancake": {
@@ -321,18 +141,6 @@
       "base": "/img/wide/american-fluffy-pancake"
     }
   },
-  "banana-split-2": {
-    "wide": {
-      "sizes": [
-        480,
-        720,
-        1080,
-        1280
-      ],
-      "ratio": 1.7778,
-      "base": "/img/wide/banana-split-2"
-    }
-  },
   "banana-split": {
     "wide": {
       "sizes": [
@@ -343,18 +151,6 @@
       ],
       "ratio": 1.7778,
       "base": "/img/wide/banana-split"
-    }
-  },
-  "blueberry-waffle": {
-    "wide": {
-      "sizes": [
-        480,
-        720,
-        1080,
-        1600
-      ],
-      "ratio": 1.7778,
-      "base": "/img/wide/blueberry-waffle"
     }
   },
   "brezel-cacao-shake": {
@@ -368,7 +164,7 @@
       "base": "/img/wide/brezel-cacao-shake"
     }
   },
-  "bubblewaffle-ice-two": {
+  "bubble_waffle_with_ice_cream__fruit": {
     "wide": {
       "sizes": [
         480,
@@ -377,19 +173,7 @@
         1600
       ],
       "ratio": 1.7778,
-      "base": "/img/wide/bubblewaffle-ice-two"
-    }
-  },
-  "bubblewaffle-icecream-snickers": {
-    "wide": {
-      "sizes": [
-        480,
-        720,
-        1080,
-        1600
-      ],
-      "ratio": 1.7778,
-      "base": "/img/wide/bubblewaffle-icecream-snickers"
+      "base": "/img/wide/bubble_waffle_with_ice_cream__fruit"
     }
   },
   "bubblewaffle-vanilla-icecream-topping": {
@@ -412,7 +196,7 @@
       "base": "/img/tall/bubblewaffle-vanilla-icecream-topping"
     }
   },
-  "cafe": {
+  "crepe": {
     "wide": {
       "sizes": [
         480,
@@ -421,43 +205,7 @@
         1600
       ],
       "ratio": 1.7778,
-      "base": "/img/wide/cafe"
-    }
-  },
-  "chokolade-banana": {
-    "wide": {
-      "sizes": [
-        480,
-        720,
-        1080,
-        1280
-      ],
-      "ratio": 1.7778,
-      "base": "/img/wide/chokolade-banana"
-    }
-  },
-  "coffe-mashine": {
-    "wide": {
-      "sizes": [
-        480,
-        720,
-        1080,
-        1600
-      ],
-      "ratio": 1.7778,
-      "base": "/img/wide/coffe-mashine"
-    }
-  },
-  "couple-in-cafe": {
-    "wide": {
-      "sizes": [
-        480,
-        720,
-        1080,
-        1600
-      ],
-      "ratio": 1.7778,
-      "base": "/img/wide/couple-in-cafe"
+      "base": "/img/wide/crepe"
     }
   },
   "gummibear-icecup-premium": {
@@ -469,6 +217,26 @@
       ],
       "ratio": 1.7778,
       "base": "/img/wide/gummibear-icecup-premium"
+    }
+  },
+  "inside_the_cafe": {
+    "wide": {
+      "sizes": [
+        480,
+        720,
+        1080,
+        1600
+      ],
+      "ratio": 1.7778,
+      "base": "/img/wide/inside_the_cafe"
+    },
+    "tall": {
+      "sizes": [
+        480,
+        718
+      ],
+      "ratio": 0.8,
+      "base": "/img/tall/inside_the_cafe"
     }
   },
   "kiwi-banana-crep": {
@@ -483,18 +251,6 @@
       "base": "/img/wide/kiwi-banana-crep"
     }
   },
-  "m-and-m-icecoffee": {
-    "wide": {
-      "sizes": [
-        480,
-        720,
-        1080,
-        1280
-      ],
-      "ratio": 1.7778,
-      "base": "/img/wide/m-and-m-icecoffee"
-    }
-  },
   "marshmallow-shake": {
     "wide": {
       "sizes": [
@@ -504,18 +260,6 @@
       ],
       "ratio": 1.7778,
       "base": "/img/wide/marshmallow-shake"
-    }
-  },
-  "pancake-strawberry": {
-    "wide": {
-      "sizes": [
-        480,
-        720,
-        1080,
-        1600
-      ],
-      "ratio": 1.7778,
-      "base": "/img/wide/pancake-strawberry"
     }
   },
   "rainbow-suprice-sup": {
@@ -553,30 +297,6 @@
       "base": "/img/wide/special-dog-waffle"
     }
   },
-  "street-woman-bubble-icecream-two": {
-    "wide": {
-      "sizes": [
-        480,
-        720,
-        1080,
-        1600
-      ],
-      "ratio": 1.7778,
-      "base": "/img/wide/street-woman-bubble-icecream-two"
-    }
-  },
-  "street-woman-bubble-icecream": {
-    "wide": {
-      "sizes": [
-        480,
-        720,
-        1080,
-        1600
-      ],
-      "ratio": 1.7778,
-      "base": "/img/wide/street-woman-bubble-icecream"
-    }
-  },
   "strwaberry-shake-deluxe": {
     "wide": {
       "sizes": [
@@ -599,30 +319,6 @@
       "base": "/img/wide/teracotta-strawberry-shake"
     }
   },
-  "tuttifrutti-crap-coco": {
-    "wide": {
-      "sizes": [
-        480,
-        720,
-        1080,
-        1600
-      ],
-      "ratio": 1.7778,
-      "base": "/img/wide/tuttifrutti-crap-coco"
-    }
-  },
-  "waffle-cafe": {
-    "wide": {
-      "sizes": [
-        480,
-        720,
-        1080,
-        1600
-      ],
-      "ratio": 1.7778,
-      "base": "/img/wide/waffle-cafe"
-    }
-  },
   "waffle-coclate-sauce": {
     "wide": {
       "sizes": [
@@ -632,6 +328,18 @@
       ],
       "ratio": 1.7778,
       "base": "/img/wide/waffle-coclate-sauce"
+    }
+  },
+  "waffle": {
+    "wide": {
+      "sizes": [
+        480,
+        720,
+        1080,
+        1600
+      ],
+      "ratio": 1.7778,
+      "base": "/img/wide/waffle"
     }
   },
   "walnut-bubblewaffle": {
@@ -655,6 +363,18 @@
       ],
       "ratio": 1.7778,
       "base": "/img/wide/woman-coworking-cafe"
+    }
+  },
+  "woof": {
+    "wide": {
+      "sizes": [
+        480,
+        720,
+        1080,
+        1600
+      ],
+      "ratio": 1.7778,
+      "base": "/img/wide/woof"
     }
   }
 }

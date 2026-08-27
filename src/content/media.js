@@ -75,7 +75,7 @@ export const galleryImages = [
   'inside_the_cafe',
   'Bubble_Waffle',
   'Coffee',
-  'Cinnamon_Roll',
+  'Topping',
   'crepe',
   'Belgian_Waffle',
   'bubble_waffle_with_ice_cream__fruit',

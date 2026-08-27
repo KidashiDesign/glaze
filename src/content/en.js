@@ -243,7 +243,7 @@ export default {
       },
       {
         id: 'toppings',
-        image: 'Cinnamon_Roll',
+        image: 'Topping',
         title: 'Toppings',
         note: 'Every dessert includes one sauce, one fruit topping and one sprinkle. Extras can be added for a small charge.',
         items: [
@@ -282,17 +282,6 @@ export default {
             price: '4 ₾',
             tags: [],
           },
-        ],
-      },
-      {
-        id: 'sandwiches',
-        image: 'Sandwich',
-        title: 'Sandwiches',
-        note: null,
-        items: [
-          { name: 'Ham & Cheese', price: '17 ₾', tags: [] },
-          { name: 'Sulguni & Pesto', price: '16 ₾', tags: [] },
-          { name: 'Salami', price: '18 ₾', tags: [] },
         ],
       },
       {

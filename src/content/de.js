@@ -241,7 +241,7 @@ export default {
       },
       {
         id: 'toppings',
-        image: 'Cinnamon_Roll',
+        image: 'Topping',
         title: 'Toppings',
         note: 'Jedes Dessert enthält bereits eine Sauce, ein Frucht-Topping und eine Streusel-Sorte. Extras gibt es gegen einen kleinen Aufpreis.',
         items: [
@@ -280,17 +280,6 @@ export default {
             price: '4 ₾',
             tags: [],
           },
-        ],
-      },
-      {
-        id: 'sandwiches',
-        image: 'Sandwich',
-        title: 'Sandwiches',
-        note: null,
-        items: [
-          { name: 'Schinken & Käse', price: '17 ₾', tags: [] },
-          { name: 'Sulguni & Pesto', price: '16 ₾', tags: [] },
-          { name: 'Salami', price: '18 ₾', tags: [] },
         ],
       },
       {
