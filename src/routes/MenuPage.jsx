@@ -1,8 +1,8 @@
 import Hero from '../components/Hero'
 import MenuList from '../components/MenuList'
 import Reviews from '../components/Reviews'
-import PhotoMosaic from '../components/PhotoMosaic'
-import { media, mosaicMenu } from '../content/media'
+import Gallery from '../components/Gallery'
+import { media } from '../content/media'
 import { useLocale } from '../i18n/LocaleProvider'
 import { usePageMeta } from '../hooks/usePageMeta'
 
@@ -28,11 +28,7 @@ export default function MenuPage() {
         </div>
       </section>
 
-      <section className="section section-tight">
-        <div className="container">
-          <PhotoMosaic images={mosaicMenu} />
-        </div>
-      </section>
+      <Gallery />
 
       <Reviews />
     </>

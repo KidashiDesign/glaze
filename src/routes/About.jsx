@@ -6,8 +6,7 @@ import Picture from '../components/Picture'
 import ShapeReveal from '../animation/ShapeReveal'
 import ParallaxDrift from '../animation/ParallaxDrift'
 import Gallery from '../components/Gallery'
-import PhotoMosaic from '../components/PhotoMosaic'
-import { media, mosaicAbout } from '../content/media'
+import { media } from '../content/media'
 import { useLocale } from '../i18n/LocaleProvider'
 import { usePageMeta } from '../hooks/usePageMeta'
 
@@ -81,12 +80,6 @@ export default function About() {
         <div className="container">
           <SectionHeading kicker={about.values.kicker} heading={about.values.heading} />
           <NumberedList items={about.values.items} />
-        </div>
-      </section>
-
-      <section className="section section-tight">
-        <div className="container">
-          <PhotoMosaic images={mosaicAbout} />
         </div>
       </section>
 
