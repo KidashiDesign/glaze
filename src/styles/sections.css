@@ -140,11 +140,11 @@
   flex-direction: column;
 }
 
-/* Wordmark: the Loredana Script cut, same in every locale — the logo isn't
+/* Wordmark: matches the headline font, same in every locale — the logo isn't
    translated copy. */
 .nav-bar__brand-name {
-  font-family: 'Loredana Script', 'Noto Serif Georgian', var(--font-heading);
-  font-weight: 400;
+  font-family: var(--font-heading);
+  font-weight: var(--font-heading-weight);
   font-size: 1.75rem;
   letter-spacing: 0.01em;
   text-transform: none;
