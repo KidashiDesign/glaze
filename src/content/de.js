@@ -99,9 +99,9 @@ export default {
       heading: 'Vom Waffeleisen und von der Bar',
       body: 'Süß und herzhaft, von morgens bis abends. Ein paar Dinge, für die man wiederkommt:',
       highlights: [
-        'Belgische Waffel mit Erdbeeren und Banane',
-        'Bubble Waffel mit Eis und Früchten',
-        'Der Woofles-Affogato',
+        'Belgische Waffel mit Vanilleeis und Blaubeeren',
+        'Bubble Waffel mit Vanilleeis und Früchten',
+        'Der Woofles Affogato'
       ],
       cta: 'Zur vollständigen Speisekarte',
     },

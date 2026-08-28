@@ -100,9 +100,9 @@ export default {
       heading: 'From the Iron and the Bar',
       body: 'Sweet and savoury, morning to evening. A few of the things people come back for:',
       highlights: [
-        'Belgian Waffle with strawberries and banana',
-        'Bubble Waffle with ice cream and fruit',
-        'The Woofles Affogato',
+        'Belgian Waffle with vanila icecream and blue berry',
+        'Bubble Waffle with vanila icecream and and fruit',
+        'The Woofles Affogato'
       ],
       cta: 'See the Full Menu',
     },
