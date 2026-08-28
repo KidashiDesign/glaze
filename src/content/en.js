@@ -21,7 +21,7 @@ export default {
   brand: {
     name: 'Woofles',
     tagline: 'Desserts & Coffee',
-    city: 'Tbilisi, Georgia',
+    city: 'Leipzig, Germany',
   },
 
   nav: {
@@ -44,12 +44,12 @@ export default {
   },
 
   home: {
-    documentTitle: 'Woofles — Desserts & Coffee in Tbilisi',
+    documentTitle: 'Woofles — Desserts & Coffee in Leipzig',
     documentDescription:
-      'Waffles, crêpes and specialty coffee in the heart of Tbilisi. Made fresh, served all day.',
+      'Waffles, crêpes and specialty coffee in the heart of Leipzig. Made fresh, served all day.',
 
     hero: {
-      kicker: 'Tbilisi, Georgia',
+      kicker: 'Leipzig, Germany',
       headline: 'Desserts & Coffee, Made Fresh All Day',
       lead: 'Belgian waffles, bubble waffles and specialty coffee — a warm corner of the city to slow down in, from the first espresso to the last scoop.',
       cta: 'See the Menu',
@@ -116,9 +116,9 @@ export default {
   },
 
   about: {
-    documentTitle: 'About — Woofles Tbilisi',
+    documentTitle: 'About — Woofles Leipzig',
     documentDescription:
-      'How Woofles came to be, and what goes into the waffles, desserts and coffee we serve in Tbilisi.',
+      'How Woofles came to be, and what goes into the waffles, desserts and coffee we serve in Leipzig.',
 
     hero: {
       kicker: 'About Us',
@@ -147,7 +147,7 @@ export default {
         {
           number: '02',
           title: 'Local First',
-          text: 'Georgian dairy, fruit from the market down the road, and suppliers we can call by name.',
+          text: 'Regional dairy, fruit from the market down the road, and suppliers we can call by name.',
         },
         {
           number: '03',
@@ -160,15 +160,15 @@ export default {
     visit: {
       kicker: 'Come By',
       heading: 'We Are Open Most of the Day',
-      body: 'Find us in the centre of Tbilisi — for the exact address and today’s hours, see the contact page.',
+      body: 'Find us in the centre of Leipzig — for the exact address and today’s hours, see the contact page.',
       cta: 'Plan Your Visit',
     },
   },
 
   menu: {
-    documentTitle: 'Menu — Woofles Tbilisi',
+    documentTitle: 'Menu — Woofles Leipzig',
     documentDescription:
-      'Waffles, crêpes, desserts, breakfast and specialty coffee at Woofles in Tbilisi.',
+      'Waffles, crêpes, desserts, breakfast and specialty coffee at Woofles in Leipzig.',
 
     hero: {
       kicker: 'The Menu',
@@ -381,31 +381,29 @@ export default {
   },
 
   contact: {
-    documentTitle: 'Visit — Woofles Tbilisi',
+    documentTitle: 'Visit — Woofles Leipzig',
     documentDescription:
-      'Address, opening hours and contact details for Woofles — Desserts & Coffee in Tbilisi.',
+      'Address, opening hours and contact details for Woofles — Desserts & Coffee in Leipzig.',
 
     hero: {
       kicker: 'Visit Us',
       headline: 'Come and Sit for a While',
-      lead: 'We are in the centre of Tbilisi, open most of the day, every day.',
+      lead: 'We are in the centre of Leipzig, open most of the day, every day.',
     },
 
     details: {
       kicker: 'Find Us',
       heading: 'Address & Hours',
       addressLabel: 'Address',
-      // Read off the client's own opening announcement (images/Woofles_is_now_open.webp).
-      // Confirm it is still current before publishing.
-      address: '9 Alexandr Pushkin St, Tbilisi, Georgia',
+      address: '8 Zuckerahornweg, 04109 Leipzig, Germany',
       hoursLabel: 'Opening hours',
       hours: 'Happy Hours 09:30–14:00 daily, 15% off',
       phoneLabel: 'Phone',
-      phone: '+995 599 79 98 06',
+      phone: '+49 341 992 07 84',
       emailLabel: 'Email',
       email: '',
       mapCta: 'Open in Google Maps',
-      mapTitle: 'Map showing Woofles — Desserts & Coffee in Tbilisi',
+      mapTitle: 'Map showing Woofles — Desserts & Coffee in Leipzig',
     },
 
     events: {
@@ -414,7 +412,7 @@ export default {
       body: 'A waffle and ice cream bar for a wedding, a dessert table for an office party, or a custom coffee setup for a launch. Send us the date, the headcount and the venue, and we will come back with options and pricing.',
       cta: 'Send an Enquiry',
       ctaNote:
-        '+995 599 79 98 06',
+        '+49 341 992 07 84',
     },
   },
 
@@ -440,12 +438,12 @@ export default {
   },
 
   footer: {
-    tagline: 'Desserts & Coffee — Tbilisi, Georgia',
+    tagline: 'Desserts & Coffee — Leipzig, Germany',
     navHeading: 'Pages',
     visitHeading: 'Visit',
     followHeading: 'Follow',
     instagram: 'Instagram',
-    instagramHref: 'https://www.instagram.com/woofles.tbilisi/',
+    instagramHref: 'https://www.instagram.com/woofles.leipzig/',
     googleMaps: 'Google Maps',
     rights: (year) => `© ${year} Woofles. All rights reserved.`,
     credit: 'Demo site for client presentation.',
