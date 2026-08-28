@@ -386,6 +386,7 @@ export default {
       kicker: 'Besuch uns',
       headline: 'Komm vorbei und bleib eine Weile',
       lead: 'Wir sind im Zentrum von Tiflis, fast den ganzen Tag geöffnet, jeden Tag.',
+      image: 'hero-menu',
     },
 
     details: {

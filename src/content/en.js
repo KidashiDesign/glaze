@@ -174,6 +174,7 @@ export default {
       kicker: 'The Menu',
       headline: 'Sweet, Savoury, All Day',
       lead: 'Served from open to close. Ask the counter about the dessert of the day.',
+      image: 'hero-menu',
     },
 
     // Transcribed from the client's own printed menu cards.

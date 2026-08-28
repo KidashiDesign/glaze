@@ -37,8 +37,8 @@ export function imageSource(name, variant = 'wide') {
 export const media = {
   heroHome: 'main_chraracter', // marble bust holding a branded cup
   heroAbout: 'Taste_Woofles', // a plate carried to a table — people, not just product
-  heroMenu: 'Bubble_Waffle_and_strawberries',
-  heroContact: 'bubblewaffle-vanilla-icecream-topping',
+  heroMenu: 'hero-menu', // a waffle with ice cream and toppings, not the printed menu card
+  heroContact: 'heroContact',
 
   introBackground: 'inside_the_cafe',
   introForeground: 'Desert',
@@ -106,10 +106,11 @@ export const mosaicAbout = [
   'walnut-bubblewaffle',
   'scream-bubble-waffle-ics',
   'kiwi-banana-crep',
-  'street-woman-bubble-icecream-two',
-  'blueberry-waffle',
+  'crepe',
+  'woof',
   'special-dog-waffle',
-  'tuttifrutti-crap-coco',
+  'scream-bubble-waffle-ics',
+  'Desert',
 ]
 
 export const mosaicMenu = [
@@ -127,5 +128,6 @@ export const mosaicContact = [
   'teracotta-strawberry-shake',
   'bubblewaffle-ice-two',
   'banana-split',
-  '3-portions-icecream',
+  'kiwi-banana-crep',
+  'Belgian_Waffle', 
 ]

@@ -35,18 +35,6 @@
       "base": "/img/wide/Bubble_Waffle"
     }
   },
-  "Cinnemon_Roll": {
-    "wide": {
-      "sizes": [
-        480,
-        720,
-        1080,
-        1280
-      ],
-      "ratio": 1.7778,
-      "base": "/img/wide/Cinnemon_Roll"
-    }
-  },
   "Coffee": {
     "wide": {
       "sizes": [
@@ -117,6 +105,18 @@
       "base": "/img/tall/Taste_Woofles"
     }
   },
+  "Topping": {
+    "wide": {
+      "sizes": [
+        480,
+        720,
+        1080,
+        1280
+      ],
+      "ratio": 1.7778,
+      "base": "/img/wide/Topping"
+    }
+  },
   "Waffle_Man": {
     "wide": {
       "sizes": [
@@ -176,26 +176,6 @@
       "base": "/img/wide/bubble_waffle_with_ice_cream__fruit"
     }
   },
-  "bubblewaffle-vanilla-icecream-topping": {
-    "wide": {
-      "sizes": [
-        480,
-        720,
-        1080,
-        1600
-      ],
-      "ratio": 1.7778,
-      "base": "/img/wide/bubblewaffle-vanilla-icecream-topping"
-    },
-    "tall": {
-      "sizes": [
-        480,
-        761
-      ],
-      "ratio": 0.8,
-      "base": "/img/tall/bubblewaffle-vanilla-icecream-topping"
-    }
-  },
   "crepe": {
     "wide": {
       "sizes": [
@@ -217,6 +197,30 @@
       ],
       "ratio": 1.7778,
       "base": "/img/wide/gummibear-icecup-premium"
+    }
+  },
+  "hero-menu": {
+    "wide": {
+      "sizes": [
+        480,
+        720,
+        1080,
+        1600
+      ],
+      "ratio": 1.7778,
+      "base": "/img/wide/hero-menu"
+    }
+  },
+  "heroContact": {
+    "wide": {
+      "sizes": [
+        480,
+        720,
+        1080,
+        1600
+      ],
+      "ratio": 1.7778,
+      "base": "/img/wide/heroContact"
     }
   },
   "inside_the_cafe": {
@@ -351,18 +355,6 @@
       ],
       "ratio": 1.7778,
       "base": "/img/wide/walnut-bubblewaffle"
-    }
-  },
-  "woman-coworking-cafe": {
-    "wide": {
-      "sizes": [
-        480,
-        720,
-        1080,
-        1600
-      ],
-      "ratio": 1.7778,
-      "base": "/img/wide/woman-coworking-cafe"
     }
   },
   "woof": {
