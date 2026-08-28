@@ -20,7 +20,7 @@ export default {
   brand: {
     name: 'Woofles',
     tagline: 'Desserts & Kaffee',
-    city: 'Tiflis, Georgien',
+    city: 'Leipzig, Deutschland',
   },
 
   nav: {
@@ -43,12 +43,12 @@ export default {
   },
 
   home: {
-    documentTitle: 'Woofles — Desserts & Kaffee in Tiflis',
+    documentTitle: 'Woofles — Desserts & Kaffee in Leipzig',
     documentDescription:
-      'Waffeln, Crêpes und Spezialitätenkaffee im Herzen von Tiflis. Frisch zubereitet, den ganzen Tag.',
+      'Waffeln, Crêpes und Spezialitätenkaffee im Herzen von Leipzig. Frisch zubereitet, den ganzen Tag.',
 
     hero: {
-      kicker: 'Tiflis, Georgien',
+      kicker: 'Leipzig, Deutschland',
       headline: 'Desserts & Kaffee, den ganzen Tag frisch',
       lead: 'Belgische Waffeln, Bubble Waffeln und Spezialitätenkaffee — eine warme Ecke der Stadt zum Verweilen, vom ersten Espresso bis zur letzten Kugel Eis.',
       cta: 'Zur Speisekarte',
@@ -115,9 +115,9 @@ export default {
   },
 
   about: {
-    documentTitle: 'Über uns — Woofles Tiflis',
+    documentTitle: 'Über uns — Woofles Leipzig',
     documentDescription:
-      'Wie Woofles entstanden ist und was in den Waffeln, Desserts und dem Kaffee steckt, die wir in Tiflis servieren.',
+      'Wie Woofles entstanden ist und was in den Waffeln, Desserts und dem Kaffee steckt, die wir in Leipzig servieren.',
 
     hero: {
       kicker: 'Über uns',
@@ -146,7 +146,7 @@ export default {
         {
           number: '02',
           title: 'Erst das Lokale',
-          text: 'Georgische Milchprodukte, Obst vom Markt gleich um die Ecke und Lieferanten, die wir beim Namen kennen.',
+          text: 'Regionale Milchprodukte, Obst vom Markt gleich um die Ecke und Lieferanten, die wir beim Namen kennen.',
         },
         {
           number: '03',
@@ -159,15 +159,15 @@ export default {
     visit: {
       kicker: 'Schau vorbei',
       heading: 'Wir haben fast den ganzen Tag geöffnet',
-      body: 'Du findest uns im Zentrum von Tiflis — die genaue Adresse und die heutigen Öffnungszeiten stehen auf der Kontaktseite.',
+      body: 'Du findest uns im Zentrum von Leipzig — die genaue Adresse und die heutigen Öffnungszeiten stehen auf der Kontaktseite.',
       cta: 'Besuch planen',
     },
   },
 
   menu: {
-    documentTitle: 'Speisekarte — Woofles Tiflis',
+    documentTitle: 'Speisekarte — Woofles Leipzig',
     documentDescription:
-      'Waffeln, Crêpes, Desserts, Frühstück und Spezialitätenkaffee bei Woofles in Tiflis.',
+      'Waffeln, Crêpes, Desserts, Frühstück und Spezialitätenkaffee bei Woofles in Leipzig.',
 
     hero: {
       kicker: 'Die Speisekarte',
@@ -378,14 +378,14 @@ export default {
   },
 
   contact: {
-    documentTitle: 'Besuch — Woofles Tiflis',
+    documentTitle: 'Besuch — Woofles Leipzig',
     documentDescription:
-      'Adresse, Öffnungszeiten und Kontaktdaten für Woofles — Desserts & Kaffee in Tiflis.',
+      'Adresse, Öffnungszeiten und Kontaktdaten für Woofles — Desserts & Kaffee in Leipzig.',
 
     hero: {
       kicker: 'Besuch uns',
       headline: 'Komm vorbei und bleib eine Weile',
-      lead: 'Wir sind im Zentrum von Tiflis, fast den ganzen Tag geöffnet, jeden Tag.',
+      lead: 'Wir sind im Zentrum von Leipzig, fast den ganzen Tag geöffnet, jeden Tag.',
       image: 'hero-menu',
     },
 
@@ -393,15 +393,15 @@ export default {
       kicker: 'So findest du uns',
       heading: 'Adresse & Öffnungszeiten',
       addressLabel: 'Adresse',
-      address: 'Alexandr-Puschkin-Str. 9, Tiflis, Georgien',
+      address: 'Zuckerahornweg 8, 04109 Leipzig, Deutschland',
       hoursLabel: 'Öffnungszeiten',
       hours: 'Happy Hours 09:30–14:00 Uhr täglich, 15 % Rabatt',
       phoneLabel: 'Telefon',
-      phone: '+995 599 79 98 06',
+      phone: '+49 341 992 07 84',
       emailLabel: 'E-Mail',
       email: '',
       mapCta: 'In Google Maps öffnen',
-      mapTitle: 'Karte — Woofles Desserts & Coffee, Tiflis',
+      mapTitle: 'Karte — Woofles Desserts & Coffee, Leipzig',
     },
 
     events: {
@@ -409,7 +409,7 @@ export default {
       heading: 'Hochzeiten, Feiern und alles dazwischen',
       body: 'Eine Waffel- und Eisbar für eine Hochzeit, ein Dessert-Tisch für eine Büroparty oder eine individuelle Kaffeestation für eine Produktpräsentation. Schick uns Datum, Gästezahl und Ort — wir melden uns mit Optionen und Preisen zurück.',
       cta: 'Anfrage senden',
-      ctaNote: '+995 599 79 98 06',
+      ctaNote: '+49 341 992 07 84',
     },
   },
 
@@ -435,12 +435,12 @@ export default {
   },
 
   footer: {
-    tagline: 'Desserts & Kaffee — Tiflis, Georgien',
+    tagline: 'Desserts & Kaffee — Leipzig, Deutschland',
     navHeading: 'Seiten',
     visitHeading: 'Besuch',
     followHeading: 'Folgen',
     instagram: 'Instagram',
-    instagramHref: 'https://www.instagram.com/woofles.tbilisi/',
+    instagramHref: 'https://www.instagram.com/woofles.leipzig/',
     googleMaps: 'Google Maps',
     rights: (year) => `© ${year} Woofles. Alle Rechte vorbehalten.`,
     credit: 'Demo-Website für die Kundenpräsentation.',
