@@ -26,20 +26,13 @@ const UA =
   '(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
 
 const FAMILIES = [
+  // Nunito carries both body copy (--font-body) and headings (--font-heading);
+  // Manosque (display/.h1-.h3) stays hand-added below, outside this pipeline.
   {
-    name: 'Cormorant Garamond',
-    query: 'Cormorant+Garamond:ital,wght@0,400;0,600;1,400',
+    name: 'Nunito',
+    query: 'Nunito:wght@400;600;700',
     subsets: ['latin', 'latin-ext'],
   },
-  {
-    name: 'Lora',
-    query: 'Lora:ital,wght@0,400;0,600;1,400',
-    subsets: ['latin', 'latin-ext'],
-  },
-  // Latin-only, bold weight: the wordmark borrows this cut for the logo in
-  // every locale (see .nav-bar__brand-name), so "Woofles" needs Latin glyphs
-  // from this family even though body/heading copy never does.
-  { name: 'Noto Serif Georgian', query: 'Noto+Serif+Georgian:wght@600', subsets: ['latin'] },
 ]
 
 /** Split a Google Fonts stylesheet into blocks tagged with their subset comment. */

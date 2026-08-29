@@ -5,9 +5,13 @@
    DO NOT hand-edit. To take a system update, drop in the new styles.css and
    re-apply the single modification below.
 
-   Modification: the `@import` of fonts.googleapis.com was removed — the faces
-   are self-hosted from /public/fonts via src/styles/fonts.css instead, so no
-   third-party request blocks first render.
+   Modifications:
+   1. The `@import` of fonts.googleapis.com was removed — the faces are
+      self-hosted from /public/fonts via src/styles/fonts.css instead, so no
+      third-party request blocks first render.
+   2. --font-heading and --font-body were swapped to Nunito (see
+      src/styles/fonts.css). Manosque, the display/.h1-.h3 headline face, is
+      set directly in base.css and untouched by this.
 
    Landing-page additions (section spacing, display type scale, layout) live in
    tokens.ext.css and never overwrite a token defined here.
@@ -55,11 +59,11 @@
   --color-accent-2-800: #573d14;
   --color-accent-2-900: #382810;
 
-  --font-heading: "Cormorant Garamond", system-ui, sans-serif;
+  --font-heading: "Nunito", system-ui, sans-serif;
   --font-heading-weight: 600; /* review round 3: bold retired — semibold is the
      interface headings' ceiling (they need the weight at small sizes); display
      text goes lighter still, to the normal cut (see the deck) */
-  --font-body: "Lora", system-ui, sans-serif;
+  --font-body: "Nunito", system-ui, sans-serif;
 
   --space-1: 4.6px;
   --space-2: 9.2px;
