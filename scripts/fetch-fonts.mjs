@@ -12,7 +12,7 @@
  *
  * Output is committed, so a fresh clone runs without network access.
  */
-import { mkdir, writeFile, rm } from 'node:fs/promises'
+import { mkdir, readdir, writeFile, rm } from 'node:fs/promises'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -25,9 +25,15 @@ const UA =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 ' +
   '(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
 
+// Hand-added faces that live in `public/fonts/` but are NOT fetched here.
+// The refresh below clears the directory to drop stale generated files, so
+// anything in this set is kept back or it would be silently destroyed.
+const KEEP = new Set(['Manosque-Regular.woff2'])
+
 const FAMILIES = [
   // Nunito carries both body copy (--font-body) and headings (--font-heading);
-  // Manosque (display/.h1-.h3) stays hand-added below, outside this pipeline.
+  // Manosque (display/.h1-.h3) is hand-added — its @font-face is in
+  // src/styles/base.css and its file is preserved via KEEP above.
   {
     name: 'Nunito',
     query: 'Nunito:wght@400;600;700',
@@ -58,8 +64,11 @@ function parseFaces(css) {
 }
 
 async function main() {
-  await rm(FONT_DIR, { recursive: true, force: true })
   await mkdir(FONT_DIR, { recursive: true })
+  for (const entry of await readdir(FONT_DIR)) {
+    if (KEEP.has(entry)) continue
+    await rm(path.join(FONT_DIR, entry), { recursive: true, force: true })
+  }
 
   const blocks = []
 
