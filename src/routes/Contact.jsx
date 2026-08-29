@@ -1,8 +1,8 @@
 import Hero from '../components/Hero'
 import SectionHeading from '../components/SectionHeading'
 import FeatureBlock from '../components/FeatureBlock'
-import PhotoMosaic from '../components/PhotoMosaic'
-import { media, mosaicContact } from '../content/media'
+import Gallery from '../components/Gallery'
+import { media } from '../content/media'
 import { placeUrl, mapEmbedUrl } from '../content/reviews'
 import { useLocale } from '../i18n/LocaleProvider'
 import { usePageMeta } from '../hooks/usePageMeta'
@@ -63,11 +63,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="section section-tight">
-        <div className="container">
-          <PhotoMosaic images={mosaicContact} />
-        </div>
-      </section>
+      <Gallery />
 
       <section className="section section-ink events">
         <div className="container">
