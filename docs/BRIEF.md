@@ -42,7 +42,7 @@ Source of truth: `styles.css` from the *Zesty Color & Type Handoff* package,
 vendored verbatim at `src/styles/classical.css`.
 
 - Ground `#f3f2f2` · surface `#eae9e9` · text `#201f1d` · accent `#b68235` (gold)
-- Cormorant Garamond headings over Lora body; semibold ceiling, display sizes
+- Nunito headings over Nunito body; semibold ceiling, display sizes
   set in the normal cut
 - Colour applied as stroke, rule and underline — never as a solid fill
 - Photographs wrapped in `.plate` for the archival grade

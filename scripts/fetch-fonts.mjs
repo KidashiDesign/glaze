@@ -26,16 +26,6 @@ const UA =
   '(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
 
 const FAMILIES = [
-  {
-    name: 'Cormorant Garamond',
-    query: 'Cormorant+Garamond:ital,wght@0,400;0,600;1,400',
-    subsets: ['latin', 'latin-ext'],
-  },
-  {
-    name: 'Lora',
-    query: 'Lora:ital,wght@0,400;0,600;1,400',
-    subsets: ['latin', 'latin-ext'],
-  },
   // Latin-only, bold weight: the wordmark borrows this cut for the logo in
   // every locale (see .nav-bar__brand-name), so "Woofles" needs Latin glyphs
   // from this family even though body/heading copy never does.
