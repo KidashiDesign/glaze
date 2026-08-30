@@ -24,19 +24,6 @@ function Arrow({ direction }) {
   )
 }
 
-/** Lucide `heart` and `message-circle`, for the desktop hover overlay. */
-function OverlayIcons() {
-  return (
-    <span className="gallery__icons" aria-hidden="true">
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-        <path d="M12 20.3 4.6 13a4.6 4.6 0 0 1 6.5-6.5l.9.9.9-.9A4.6 4.6 0 0 1 19.4 13Z" />
-      </svg>
-      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-        <path d="M12 3c5 0 9 3.4 9 7.6 0 4.2-4 7.6-9 7.6a10 10 0 0 1-2.6-.3L4 21l1.4-3.7A7.3 7.3 0 0 1 3 10.6C3 6.4 7 3 12 3Z" />
-      </svg>
-    </span>
-  )
-}
 
 /**
  * Horizontal photo strip — scroll-snap, swipeable on touch, drag- or
@@ -231,7 +218,6 @@ export default function Gallery() {
         tabIndex={0}
         aria-label={t.gallery.heading}
       >
-        <li aria-hidden="true" className="gallery__spacer" />
         {galleryImages.map((name, i) => (
           <li
             key={name}
@@ -251,15 +237,9 @@ export default function Gallery() {
                 plate
                 priority={i === 0}
               />
-              {/* Desktop reveals the icons on hover; on touch the caption bar
-                  is always visible instead, since there is no hover state. */}
-              <div className="gallery__overlay">
-                <OverlayIcons />
-              </div>
             </figure>
           </li>
         ))}
-        <li aria-hidden="true" className="gallery__spacer" />
       </ul>
 
       <div className="container gallery__foot">

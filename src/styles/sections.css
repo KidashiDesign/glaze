@@ -833,17 +833,6 @@
   scroll-snap-align: center;
 }
 
-/* Invisible flex siblings at each end of the strip, sized from JS
-   (--gallery-edge-pad, in Gallery.jsx) to exactly the scroll room the
-   first/last card needs to reach the strip's center like any interior card
-   can — without them, scrolling runs out before an edge card ever gets
-   there, so it could never become the sharp, active card the way interior
-   cards can. Sizing this with a flex sibling rather than container padding
-   keeps every card's own `flex-basis: N%` anchored to the same content-box
-   width regardless of the pad's size. */
-.gallery__spacer {
-  flex: 0 0 var(--gallery-edge-pad, 0px);
-}
 
 .gallery__figure {
   position: relative;
@@ -876,11 +865,6 @@
   object-fit: cover;
 }
 
-/* Touch has no hover, so the caption bar is permanent there and the icon
-   overlay is desktop-only. */
-.gallery__overlay {
-  display: none;
-}
 
 .gallery__foot {
   display: flex;
@@ -919,37 +903,11 @@
   .gallery__hint {
     display: none;
   }
-
-  .gallery__overlay {
-    position: absolute;
-    inset: 0;
-    display: grid;
-    place-items: center;
-    color: var(--color-on-ink);
-    background: color-mix(in srgb, var(--color-ink) 45%, transparent);
-    opacity: 0;
-    transition: opacity var(--dur-base) var(--ease-out);
-  }
-
-  .gallery__figure:hover .gallery__overlay,
-  .gallery__figure:focus-within .gallery__overlay {
-    opacity: 1;
-  }
-
-  .gallery__icons {
-    display: flex;
-    gap: var(--space-4);
-  }
-
 }
 
 @media (prefers-reduced-motion: reduce) {
   .gallery__strip {
     scroll-behavior: auto;
-  }
-
-  .gallery__overlay {
-    transition: none;
   }
 
   .gallery__figure {
